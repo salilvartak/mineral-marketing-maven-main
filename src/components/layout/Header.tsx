@@ -84,7 +84,7 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-card border-t border-border animate-fade-in">
+          <div className="lg:hidden bg-white border-t border-border animate-fade-in">
             <div className="container mx-auto px-4 py-4">
               {navLinks.map((link) => (
                 <Link
