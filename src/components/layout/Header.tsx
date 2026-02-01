@@ -41,7 +41,7 @@ export const Header = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <img src="/assets/STONEX NEW BLUE (1).png" alt="StoneX Enterprises Logo" className="h-20 w-auto" />
+              <img src="https://i.ibb.co/MyzKp7hf/STONEX.png" alt="StoneX Enterprises Logo" className="h-20 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
