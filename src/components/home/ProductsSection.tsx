@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const products = [
@@ -27,7 +27,6 @@ const products = [
     purity: "99%+",
     image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
   },
-  
   {
     id: "coated-calcite",
     name: "Coated Calcite",
@@ -38,60 +37,73 @@ const products = [
 
 export const ProductsSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-16 md:py-24 bg-slate-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-accent font-semibold uppercase tracking-wider text-sm mb-3 block">Our Products</span>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">
-            Premium Mineral Fillers & Extenders
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Click on any product to view detailed specifications
-          </p>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6 text-center md:text-left">
+          <div className="max-w-2xl">
+            <span className="text-accent font-bold uppercase tracking-widest text-xs mb-3 block">
+              Premium Collection
+            </span>
+            <h2 className="font-heading font-bold text-3xl md:text-5xl text-foreground">
+              Industrial Grade <br className="hidden md:block" />
+              <span className="text-primary/80">Mineral Fillers</span>
+            </h2>
+          </div>
+          <Button variant="outline" className="hidden md:flex group border-accent text-accent hover:bg-accent hover:text-white" asChild>
+            <Link to="/products">
+              Explore Catalog
+              <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
         </div>
 
-        {/* Products Grid - Simplified for discovery */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        {/* Optimized Products Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
           {products.map((product, index) => (
             <Link
               key={product.id}
               to={`/products/${product.id}`}
-              className="group bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover-lift"
+              className="group relative bg-white rounded-2xl overflow-hidden border border-border shadow-sm active:scale-[0.98] md:hover:shadow-2xl transition-all duration-500"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              {/* Image */}
-              <div className="relative aspect-square overflow-hidden">
+              {/* Image Container */}
+              <div className="relative aspect-[16/10] sm:aspect-[4/5] overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <ArrowRight className="h-8 w-8 text-primary-foreground" />
+                {/* Gradient Overlay - more visible on mobile for legibility */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-70 md:opacity-60 md:group-hover:opacity-80 transition-opacity" />
+                
+                {/* Purity Badge */}
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary text-[10px] font-black px-2 py-1 rounded uppercase tracking-tighter shadow-sm">
+                  {product.purity} Purity
                 </div>
-                <div className="absolute top-2 right-2 bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded-full">
-                  {product.purity}
-                </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-4 text-center">
-                <h3 className="font-heading font-semibold text-sm text-foreground group-hover:text-accent transition-colors">
-                  {product.name}
-                </h3>
+                {/* Content Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white md:translate-y-2 md:group-hover:translate-y-0 transition-transform">
+                  <div className="flex items-center gap-2 mb-1">
+                    <BadgeCheck className="h-4 w-4 text-accent" />
+                    <span className="text-[10px] uppercase tracking-widest text-white/80">Certified Quality</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg md:text-xl leading-tight">
+                    {product.name}
+                  </h3>
+                  <div className="mt-3 flex items-center text-accent text-sm font-bold md:opacity-0 md:group-hover:opacity-100 transition-opacity">
+                    View Specs <ArrowRight className="ml-2 h-4 w-4" />
+                  </div>
+                </div>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg" asChild>
-            <Link to="/products">
-              View All Products
-              <ArrowRight className="h-5 w-5 ml-2" />
-            </Link>
+        {/* Mobile View All Button */}
+        <div className="text-center mt-10 md:hidden">
+          <Button variant="cta" size="lg" className="w-full" asChild>
+            <Link to="/products">View All Products</Link>
           </Button>
         </div>
       </div>

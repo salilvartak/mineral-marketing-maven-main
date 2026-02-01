@@ -20,6 +20,7 @@ const productsData: Record<string, {
   rawMaterial: string;
   productionCapacity: string;
   whatIs: string;
+  how: string;
   physicalProperties: { property: string; value: string }[];
   chemicalProperties: { property: string; value: string }[];
   particleSizes: string[];
@@ -34,6 +35,7 @@ const productsData: Record<string, {
     rawMaterial: "Natural calcite sourced from Rajasthan mines with strict quality control",
     productionCapacity: "1,500+ MT per month",
     whatIs: "Calcite Powder is a natural form of calcium carbonate (CaCO3) characterized by its high brightness, whiteness, and purity. It is one of the most versatile industrial minerals used as a filler, extender, and pigment across various industries.",
+    how:"We source top premium grade of Calcite lumps (CaCO3) containing high calcium carbonate from all across Rajasthan  and manufacture High Quality Calcite Powder with purity up to ____% under the best manufacturing process to maintain the highest standards of quality. Total production of Calcite powder _______MT per month. Our Calcite powder availed at the most affordable prices.",
     physicalProperties: [
       { property: "Color", value: "White to off-white" },
       { property: "Specific Gravity", value: "2.7 g/cm³" },
@@ -68,6 +70,7 @@ const productsData: Record<string, {
     rawMaterial: "High-grade dolomite from Rajasthan mineral deposits",
     productionCapacity: "1,200+ MT per month",
     whatIs: "Dolomite Powder is a double carbonate of calcium and magnesium CaMg(CO3)2. It offers excellent thermal stability, high compression strength, and weather resistance, making it ideal for construction, glass, ceramics, and agricultural applications.",
+    how:"",
     physicalProperties: [
       { property: "Color", value: "White to light grey" },
       { property: "Specific Gravity", value: "2.85 g/cm³" },
@@ -101,6 +104,7 @@ const productsData: Record<string, {
     rawMaterial: "Premium quality quartz crystals from Rajasthan",
     productionCapacity: "800+ MT per month",
     whatIs: "Quartz Powder is ultra-fine silicon dioxide (SiO2) known for its high purity, excellent hardness, and chemical resistance. It is essential for slab manufacturing, glass production, construction, and various industrial applications requiring high silica content.",
+    how:"",
     physicalProperties: [
       { property: "Color", value: "White" },
       { property: "Specific Gravity", value: "2.65 g/cm³" },
@@ -134,6 +138,7 @@ const productsData: Record<string, {
     rawMaterial: "Selected quartz lumps processed for uniform sizing",
     productionCapacity: "600+ MT per month",
     whatIs: "Quartz Grits are uniformly graded particles of silicon dioxide available in various mesh sizes. Known for their high silica content, durability, and uniform grading, they are essential for water filtration, surface finishing, and abrasive applications.",
+    how:"",
     physicalProperties: [
       { property: "Color", value: "White to off-white" },
       { property: "Specific Gravity", value: "2.65 g/cm³" },
@@ -166,6 +171,7 @@ const productsData: Record<string, {
     rawMaterial: "High-grade talc ore from Rajasthan deposits",
     productionCapacity: "500+ MT per month",
     whatIs: "Talc Powder is a hydrated magnesium silicate known for its soft texture, high lubricity, and chemical inertness. It is the softest mineral (Mohs hardness 1) and is widely used in pharmaceuticals, cosmetics, rubber, plastics, and paper industries.",
+    how:"",
     physicalProperties: [
       { property: "Color", value: "White to light grey" },
       { property: "Specific Gravity", value: "2.7-2.8 g/cm³" },
@@ -200,6 +206,7 @@ const productsData: Record<string, {
     rawMaterial: "Premium calcite powder with stearic acid surface treatment",
     productionCapacity: "400+ MT per month",
     whatIs: "Coated Calcite is calcium carbonate that has been surface-treated with stearic acid or other fatty acids. This coating improves dispersion, reduces moisture absorption, and enhances compatibility with polymer matrices, making it ideal for PVC, cables, and masterbatch applications.",
+    how:"",
     physicalProperties: [
       { property: "Color", value: "White" },
       { property: "Specific Gravity", value: "2.65 g/cm³" },
@@ -232,6 +239,7 @@ const productsData: Record<string, {
     rawMaterial: "Premium dolomite with surface modification treatment",
     productionCapacity: "300+ MT per month",
     whatIs: "Coated Dolomite is dolomite powder that has been surface-treated for enhanced compatibility with polymers. The coating reduces moisture absorption, improves dispersion, and provides better mechanical properties in rubber and plastic applications.",
+    how:"",
     physicalProperties: [
       { property: "Color", value: "White to light grey" },
       { property: "Specific Gravity", value: "2.80 g/cm³" },
@@ -300,7 +308,7 @@ const ProductDetail = () => {
       <Header />
       <main>
         {/* Breadcrumb */}
-        <section className="pt-28 pb-4 bg-muted">
+        <section className="pt-40 pb-4 bg-muted">
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-2 text-sm">
               <Link to="/" className="text-muted-foreground hover:text-foreground">Home</Link>
@@ -411,14 +419,22 @@ const ProductDetail = () => {
             <h2 className="font-heading font-bold text-2xl text-foreground mb-4">What is {product.name}?</h2>
             <p className="text-muted-foreground text-lg leading-relaxed">{product.whatIs}</p>
           </div>
+          
         </section>
 
-        {/* Desktop: Tables Side by Side | Mobile: Collapsible */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4">
+            <h2 className="font-heading font-bold text-2xl text-foreground mb-4">How We Make {product.name}?</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">{product.how}</p>
+          </div>
+        </section>
+
+        {/* Desktop: Tables Side by Side | Mobile: Collapsible 
         <section className="py-12 bg-muted">
           <div className="container mx-auto px-4">
-            {/* Desktop View */}
+            {/* Desktop View 
             <div className="hidden md:grid md:grid-cols-2 gap-8">
-              {/* Physical Properties */}
+              {/* Physical Properties 
               <div>
                 <h3 className="font-heading font-bold text-xl text-foreground mb-4">Physical Properties</h3>
                 <div className="overflow-x-auto">
@@ -435,7 +451,7 @@ const ProductDetail = () => {
                 </div>
               </div>
               
-              {/* Chemical Properties */}
+              {/* Chemical Properties 
               <div>
                 <h3 className="font-heading font-bold text-xl text-foreground mb-4">Chemical Properties</h3>
                 <div className="overflow-x-auto">
@@ -453,7 +469,7 @@ const ProductDetail = () => {
               </div>
             </div>
 
-            {/* Mobile View - Collapsible */}
+            {/* Mobile View - Collapsible 
             <div className="md:hidden space-y-4">
               <CollapsibleSection title="Physical Properties" icon={Beaker}>
                 <div className="overflow-x-auto -mx-4 px-4">
@@ -486,7 +502,7 @@ const ProductDetail = () => {
               </CollapsibleSection>
             </div>
           </div>
-        </section>
+        </section>*/}
 
         {/* Particle Sizes */}
         <section className="py-12 bg-background">

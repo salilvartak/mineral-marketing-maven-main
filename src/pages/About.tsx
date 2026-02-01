@@ -16,7 +16,7 @@ const About = () => {
       <Header />
       <main>
         {/* Hero Section - Welcome Message */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-primary to-secondary">
+        <section className="pt-40 pb-20 bg-gradient-to-br from-primary to-secondary">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <h1 className="font-heading font-bold text-4xl md:text-5xl text-primary-foreground mb-6">
