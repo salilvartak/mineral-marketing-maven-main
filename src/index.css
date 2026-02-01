@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Stonex Enterprises - Industrial Minerals Design System */
+
+@layer base {
+  :root {
+    /* Industrial Dark Blue Theme */
+    --background: 210 40% 98%;
+    --foreground: 207 60% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 207 60% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 60% 15%;
+
+    /* Dark Industrial Blue */
+    --primary: 207 65% 15%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Stone Grey */
+    --secondary: 0 0% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted Stone */
+    --muted: 210 20% 92%;
+    --muted-foreground: 207 20% 40%;
+
+    /* Mineral Green Accent */
+    --accent: 146 48% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    /* CTA Orange */
+    --cta: 27 80% 52%;
+    --cta-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 85%;
+    --input: 210 20% 85%;
+    --ring: 207 65% 15%;
+
+    --radius: 0.5rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(207 65% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(207 65% 15% / 0.1), 0 2px 4px -2px hsl(207 65% 15% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(207 65% 15% / 0.1), 0 4px 6px -4px hsl(207 65% 15% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(207 65% 15% / 0.1), 0 8px 10px -6px hsl(207 65% 15% / 0.1);
+
+    /* Chart colors */
+    --chart-1: 207 65% 15%;
+    --chart-2: 146 48% 36%;
+    --chart-3: 27 80% 52%;
+    --chart-4: 0 0% 48%;
+    --chart-5: 210 20% 60%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 207 60% 15%;
+    --sidebar-primary: 207 65% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 146 48% 36%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 20% 85%;
+    --sidebar-ring: 207 65% 15%;
+
+    --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 207 60% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 207 50% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 207 50% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 207 65% 15%;
+
+    --secondary: 0 0% 60%;
+    --secondary-foreground: 207 60% 10%;
+
+    --muted: 207 30% 20%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 146 48% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --cta: 27 80% 55%;
+    --cta-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 207 30% 25%;
+    --input: 207 30% 25%;
+    --ring: 210 40% 80%;
+
+    --chart-1: 210 40% 98%;
+    --chart-2: 146 48% 45%;
+    --chart-3: 27 80% 55%;
+    --chart-4: 0 0% 60%;
+    --chart-5: 210 20% 50%;
+
+    --sidebar-background: 207 50% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 207 65% 15%;
+    --sidebar-accent: 146 48% 45%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 207 30% 25%;
+    --sidebar-ring: 210 40% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  .animate-count-up {
+    animation: countUp 2s ease-out forwards;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-lg;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-card/80;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
