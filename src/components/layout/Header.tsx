@@ -36,18 +36,12 @@ export const Header = () => {
       </div>
 
       {/* Main Nav */}
-      <nav className="bg-card/95 backdrop-blur-md shadow-md">
+      <nav className="bg-[#0d293f] backdrop-blur-md shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-xl">S</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-xl text-foreground">Stonex</span>
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">Enterprises</span>
-              </div>
+              <img src="src/assets/STONEX NEW BLUE (1).png" alt="StoneX Enterprises Logo" className="h-20 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -60,7 +54,7 @@ export const Header = () => {
                     "font-medium transition-colors relative py-2",
                     location.pathname === link.path
                       ? "text-accent"
-                      : "text-foreground hover:text-accent",
+                      : "text-white hover:text-accent",
                     "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300",
                     location.pathname === link.path ? "after:w-full" : "after:w-0 hover:after:w-full"
                   )}
