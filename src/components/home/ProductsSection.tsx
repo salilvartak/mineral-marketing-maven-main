@@ -28,8 +28,29 @@ const products = [
     image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
   },
   {
+    id: "dolomite-grits",
+    name: "Dolomite Grits",
+    purity: "98%+",
+    image: "https://images.unsplash.com/photo-1533907650686-70576141c030?w=400&h=300&fit=crop",
+  },
+  {
     id: "coated-calcite",
-    name: "Coated Calcite",
+    name: "Coated Calcite Powder",
+    purity: "98%+",
+    image: "https://images.unsplash.com/photo-1533907650686-70576141c030?w=400&h=300&fit=crop",
+  },
+  {
+    id: "coated-dolomite",
+    name: "Coated Dolomite Powder",
+    purity: "98%+",
+    image: "https://images.unsplash.com/photo-1533907650686-70576141c030?w=400&h=300&fit=crop",
+  },
+
+  
+  
+  {
+    id: "pebbles",
+    name: "Pebbles",
     purity: "98%+",
     image: "https://images.unsplash.com/photo-1533907650686-70576141c030?w=400&h=300&fit=crop",
   },
@@ -47,7 +68,7 @@ export const ProductsSection = () => {
             </span>
             <h2 className="font-heading font-bold text-3xl md:text-5xl text-foreground">
               Industrial Grade <br className="hidden md:block" />
-              <span className="text-primary/80">Mineral Fillers</span>
+              <span className="text-primary/80">Mineral Fillers & Extenders</span>
             </h2>
           </div>
           <Button variant="outline" className="hidden md:flex group border-accent text-accent hover:bg-accent hover:text-white" asChild>
@@ -59,7 +80,7 @@ export const ProductsSection = () => {
         </div>
 
         {/* Optimized Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {products.map((product, index) => (
             <Link
               key={product.id}

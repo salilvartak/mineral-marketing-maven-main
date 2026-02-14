@@ -93,7 +93,7 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Map */}
+        {/* Map 
         <section className="h-80 md:h-96 bg-muted">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.9876543210!2d74.7661!3d26.3297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE5JzQ2LjkiTiA3NMKwNDUnNTcuOSJF!5e0!3m2!1sen!2sin!4v1234567890"
@@ -105,7 +105,7 @@ const Contact = () => {
             referrerPolicy="no-referrer-when-downgrade"
             title="Stonex Enterprises Location"
           />
-        </section>
+        </section>*/}
 
         {/* Inquiry Form */}
         <section className="py-16 bg-background">

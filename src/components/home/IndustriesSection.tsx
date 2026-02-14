@@ -1,4 +1,5 @@
-import { Palette, Pipette, CircleDot, GlassWater, Tractor, Building2, FileText, Pill } from "lucide-react";
+import { Description } from "@radix-ui/react-toast";
+import { Palette, Pipette, CircleDot, GlassWater, Tractor, Building2, FileText, Pill, icons } from "lucide-react";
 
 const industries = [
   {
@@ -12,15 +13,31 @@ const industries = [
     description: "PVC, PE, PP filler for cost reduction",
   },
   {
+    icon: Palette,
+    name: "Slabs(Countertop)",
+    description: ""
+  },
+  {
+    icon: GlassWater,
+    name: "Glass",
+    description: "Stabilizer & flux for quality improvement",
+  },
+  {
+    icon: GlassWater,
+    name: "Ceramics",
+    description: "Stabilizer & flux for quality improvement",
+  },
+  {
     icon: CircleDot,
     name: "Rubber Industry",
     description: "Reinforcing filler for flexibility & durability",
   },
   {
-    icon: GlassWater,
-    name: "Glass & Ceramics",
-    description: "Stabilizer & flux for quality improvement",
+    icon: FileText,
+    name: "Paper Industry",
+    description: "Coating pigment for brightness & smoothness",
   },
+  
   {
     icon: Tractor,
     name: "Agriculture",
@@ -31,11 +48,7 @@ const industries = [
     name: "Construction",
     description: "Building materials & cement additives",
   },
-  {
-    icon: FileText,
-    name: "Paper Industry",
-    description: "Coating pigment for brightness & smoothness",
-  },
+  
   {
     icon: Pill,
     name: "Pharmaceuticals",
@@ -54,7 +67,7 @@ export const IndustriesSection = () => {
             Powering Diverse Industries
           </h2>
           <p className="text-muted-foreground text-lg">
-            Our premium mineral products find applications across a wide range of industries, delivering quality and consistency.
+            <span className="font-bold">Stonex Enterprises</span> is a leading Manufacturer and Supplier of Premium Quality Minerals Filler and Extender. We deliver excellent quality products with the use of latest technology and timely delivering to them.
           </p>
         </div>
 

@@ -4,7 +4,7 @@ const features = [
   {
     icon: Cog,
     title: "Advanced Technology",
-    description: "State-of-the-art Ball Mills, Raymond Mills, Micronizers & 28 Roller Machines",
+    description: "State-of-the-art Ball Mills, Micronizers, 28 Roller with Classifier Machine and Automatic Grits colour Shorter Machine",
   },
   {
     icon: Shield,
@@ -29,6 +29,21 @@ const features = [
   {
     icon: Check,
     title: "15+ Years Experience",
+    description: "Trusted expertise in mineral grinding and quality standards",
+  },
+  {
+    icon: Check,
+    title: "Loyalty",
+    description: "Trusted expertise in mineral grinding and quality standards",
+  },
+  {
+    icon: Check,
+    title: "Professional Workers",
+    description: "Trusted expertise in mineral grinding and quality standards",
+  },
+  {
+    icon: Check,
+    title: "Own Mines and Manufacturing",
     description: "Trusted expertise in mineral grinding and quality standards",
   },
 ];
@@ -56,12 +71,12 @@ export const WhyChooseUsSection = () => {
 
           {/* Content Side */}
           <div>
-            <span className="text-accent font-semibold uppercase tracking-wider text-sm mb-3 block">Why Choose Us</span>
+            <span className="text-accent font-semibold uppercase tracking-wider text-sm mb-3 block"></span>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-6">
-              Your Trusted Partner in Mineral Solutions
+              Why Choose Us
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              At Stonex Enterprises, we combine decades of expertise with modern technology to deliver the finest mineral products that meet your exact specifications.
+              At <span className="font-bold">Stonex Enterprises</span>, we combine decades of expertise with modern technology to deliver the finest mineral products that meet your exact specifications.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">

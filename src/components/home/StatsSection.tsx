@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { Calendar, Weight, Users, Factory } from "lucide-react";
+import { Calendar, Weight, Users, Factory, Pickaxe } from "lucide-react";
 
 const stats = [
   {
@@ -11,14 +11,14 @@ const stats = [
   },
   {
     icon: Weight,
-    value: 50000,
-    label: "Annual Capacity",
+    value: 180000,
+    label: "Annual Production",
     suffix: " MT",
     isYear: false,
   },
   {
     icon: Users,
-    value: 500,
+    value: 20,
     label: "Happy Clients",
     suffix: "+",
     isYear: false,
@@ -26,7 +26,14 @@ const stats = [
   {
     icon: Factory,
     value: 8,
-    label: "Plants & Mines",
+    label: "Plants",
+    suffix: "",
+    isYear: false,
+  },
+  {
+    icon: Pickaxe,
+    value: 2,
+    label: "Mines",
     suffix: "",
     isYear: false,
   },
@@ -83,7 +90,7 @@ export const StatsSection = () => {
   return (
     <section ref={sectionRef} className="bg-primary py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
           {stats.map((stat, index) => (
             <StatItem key={stat.label} stat={stat} isVisible={isVisible} delay={index * 100} />
           ))}
@@ -111,7 +118,7 @@ const StatItem = ({ stat, isVisible, delay }: { stat: typeof stats[0]; isVisible
         <Icon className="h-8 w-8 text-accent" />
       </div>
       <div className="font-heading font-bold text-3xl md:text-4xl text-primary-foreground mb-2">
-        {count.toLocaleString()}{stat.suffix}
+        {stat.isYear ? count : count.toLocaleString()}{stat.suffix}
       </div>
       <p className="text-primary-foreground/70">{stat.label}</p>
     </div>

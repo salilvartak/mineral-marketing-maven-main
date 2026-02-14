@@ -53,7 +53,7 @@ const productsData: Record<string, {
       { property: "Loss on Ignition", value: "42-44%" },
     ],
     particleSizes: ["2 Micron", "5 Micron", "10 Micron", "20 Micron", "40 Micron", "100 Mesh", "200 Mesh", "300 Mesh", "500 Mesh"],
-    packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags", "Customized packaging available"],
+    packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
     applications: [
       { industry: "Paints & Coatings", uses: ["Improves opacity and brightness", "Acts as extender pigment", "Enhances durability"] },
       { industry: "Paper Manufacturing", uses: ["Coating pigment", "Filler for smoothness", "Brightness enhancement"] },

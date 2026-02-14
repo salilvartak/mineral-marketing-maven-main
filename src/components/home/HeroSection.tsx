@@ -18,18 +18,15 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative container mx-auto px-4 pt-32 pb-20">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm text-accent-foreground px-4 py-2 rounded-full mb-6 animate-fade-up">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            <span className="text-sm font-medium">Trusted by 500+ Industries Across India</span>
-          </div>
+          
 
           <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             India's Leading <span className="text-accent">Manufacturer & Supplier</span>{" "}
-            of Premium Mineral Fillers
+            of Premium Mineral Fillers & Extenders
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-8 max-w-2xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Premium quality Quartz, Calcite, Dolomite & Talc powders for Paint, Plastic, Rubber, Glass, and Construction industries. Serving excellence from Rajasthan to the world.
+            Premium quality Quartz Powder, Quartz Grits, Calcite Powder, Dolomite Powder and Dolomite Grits for Slab, Paint, Plastic, Rubber, Glass, Agriculture & Construction Industries. Serving excellence from Rajasthan. We also manufacturing Coated Dolomite Powder and Coated Calcite Powder & Pebble’s.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>

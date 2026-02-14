@@ -59,9 +59,12 @@ export const Footer = () => {
                 { name: "Calcite Powder", id: "calcite-powder" },
                 { name: "Dolomite Powder", id: "dolomite-powder" },
                 { name: "Quartz Powder", id: "quartz-powder" },
-                { name: "Quartz Grits", id: "quartz-grits" },
-                { name: "Talc Powder", id: "talc-powder" },
-                { name: "Coated Calcite", id: "coated-calcite" },
+                { name: "Quartz Gritz", id: "quartz-grits" },
+                { name: "Dolomite Gritz", id: "dolomite-gritz"},
+                { name: "Coated Dolomite Powder", id: "coted-dolomite"},
+                
+                { name: "Coated Calcite Powder", id: "coated-calcite" },
+                { name: "Pebbles", id: "coated-calcite" },
               ].map((product) => (
                 <li key={product.id}>
                   <Link to={`/products/${product.id}`} className="text-primary-foreground/80 hover:text-accent transition-colors">
@@ -79,20 +82,23 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 mt-1 text-accent shrink-0" />
                 <span className="text-primary-foreground/80">
-                  Industrial Area, Nasirabad<br />
-                  Ajmer, Rajasthan 305601, India
+                  Kotdi, Dariba, Railmagra<br />
+                  Dist-Rajsamand, Rajasthan 313211, India
                 </span>
               </li>
               <li>
                 <a href="tel:+919876543210" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
                   <Phone className="h-5 w-5 text-accent" />
-                  <span>+91 98765 43210</span>
+                  <span>+91 9928157991</span>
+                  <span>+91 9929702991</span>
+                  <span>+91 8112290501</span>
+                  <span>+91 9414503816</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:info@stonexenterprises.com" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
                   <Mail className="h-5 w-5 text-accent" />
-                  <span>info@stonexenterprises.com</span>
+                  <span>Stonex.enterprises8801@gmail.com</span>
                 </a>
               </li>
             </ul>

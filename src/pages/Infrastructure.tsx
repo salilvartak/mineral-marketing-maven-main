@@ -20,11 +20,11 @@ const plants = [
 
 const machinery = [
   "Ball Mills",
-  "Raymond Mills",
   "Micronizer",
   "28 Roller with Classifier",
-  "Multi Grain Sorting Machine",
+  "Multi Colour Grain Sorting Machine",
   "Gitti Sorting Machine",
+  "Magnetic Sorting Machine",
   "Automatic Powder Coating Machines",
 ];
 
@@ -60,20 +60,21 @@ const Infrastructure = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
               <div className="bg-card p-6 rounded-lg shadow-md text-center">
-                <div className="font-heading font-bold text-3xl text-accent mb-2">3+</div>
-                <p className="text-muted-foreground">Mine Locations</p>
-              </div>
-              <div className="bg-card p-6 rounded-lg shadow-md text-center">
-                <div className="font-heading font-bold text-3xl text-accent mb-2">5+</div>
+                <div className="font-heading font-bold text-3xl text-accent mb-2">8</div>
                 <p className="text-muted-foreground">Manufacturing Plants</p>
               </div>
               <div className="bg-card p-6 rounded-lg shadow-md text-center">
                 <div className="font-heading font-bold text-3xl text-accent mb-2">2</div>
+                <p className="text-muted-foreground">Mine Locations</p>
+              </div>
+              
+              <div className="bg-card p-6 rounded-lg shadow-md text-center">
+                <div className="font-heading font-bold text-3xl text-accent mb-2">1</div>
                 <p className="text-muted-foreground">Warehouse Locations</p>
               </div>
               <div className="bg-card p-6 rounded-lg shadow-md text-center">
-                <div className="font-heading font-bold text-3xl text-accent mb-2">50K+ MT</div>
-                <p className="text-muted-foreground">Annual Capacity</p>
+                <div className="font-heading font-bold text-3xl text-accent mb-2">180K+ MT</div>
+                <p className="text-muted-foreground">Annual Production</p>
               </div>
             </div>
           </div>
@@ -226,20 +227,14 @@ const Infrastructure = () => {
                     </div>
                     <p className="text-muted-foreground text-sm">Strategic location for West India distribution</p>
                   </div>
-                  <div className="bg-card p-5 rounded-lg shadow-sm">
-                    <div className="flex items-center gap-3 mb-2">
-                      <MapPin className="h-5 w-5 text-accent" />
-                      <h4 className="font-heading font-semibold text-foreground">Baroda, Nasirabad</h4>
-                    </div>
-                    <p className="text-muted-foreground text-sm">Central warehouse near manufacturing plants</p>
-                  </div>
+                  
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Image Gallery */}
+        {/* Image Gallery 
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4">
             <h2 className="font-heading font-bold text-2xl text-foreground mb-8 text-center">Facility Gallery</h2>
@@ -260,9 +255,9 @@ const Infrastructure = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section>*/}
 
-        {/* Live Google Map */}
+        {/* Live Google Map 
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-2xl mx-auto mb-8">
@@ -292,6 +287,7 @@ const Infrastructure = () => {
             </div>
           </div>
         </section>
+        */}
       </main>
       <Footer />
     </div>

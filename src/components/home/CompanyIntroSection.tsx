@@ -15,7 +15,7 @@ export const CompanyIntroSection = () => {
               Manufacturing Excellence Since 2011
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Stonex Enterprises is one of the leading manufacturers and suppliers of premium quality mineral fillers and extenders in Rajasthan, India. With state-of-the-art Ball Mills, Raymond Mills, Micronizers, and 28 Roller Machines, we produce ultra-fine to coarse grade Quartz, Calcite, Dolomite, and Talc powders that meet the highest industry standards for Paint, Plastic, Rubber, Glass, and Construction industries.
+              <span className="font-bold">STONEX ENTERPRISES</span> is India's leading Manufacturer and Supplier of Premium Quality Mineral Filler and Extender such as Quartz Powder, Quartz Grits, Calcite Powder, Dolomite Powder and Dolomite Grits, which are widely use in key industries such as Slab (Countertop), Paints, Plastic (Pipes ,PVC, Cables), Rubber, Detergents, Polymers, Agriculture, Glass, Ceramic, Pharmaceutical and Construction for their Excellent Physico-Mechanical Properties. We also manufacturing Coated Dolomite Powder and Coated Calcite Powder with Stearic acid coating for enhancing Minerals Properties (Moisture Resistance and Polymer Compatibility) and various type of Pebble’s.
             </p>
             <Button variant="outline" size="lg" asChild>
               <Link to="/about" className="gap-2">

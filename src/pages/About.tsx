@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const machinery = [
-  { category: "Grinding Mills", items: ["Ball Mills", "Raymond Mills", "Micronizer"] },
-  { category: "Processing Equipment", items: ["28 Roller with Classifier", "Multi Grain Sorting Machine", "Gitti Sorting Machine"] },
+  { category: "Grinding Mills", items: ["Ball Mills","Micronizer","28 Roller with Classifier"] },
+  { category: "Processing Equipment", items: [ "Gitti Sorting Machine", "Automatic Grits Colour Shorter Machine","Magnetic Shorting Machine"] },
   { category: "Coating Equipment", items: ["Automatic Powder Coating Machines", "Surface Treatment Units"] },
 ];
 
@@ -23,7 +23,7 @@ const About = () => {
                 Welcome to Stonex Enterprises
               </h1>
               <p className="text-xl text-primary-foreground/90">
-                India's leading manufacturer of premium mineral fillers with over 15 years of expertise
+                India's leading manufacturer of premium mineral Fillers & Extenders with over 15 years of expertise
               </p>
             </div>
           </div>
@@ -39,11 +39,9 @@ const About = () => {
               </h2>
               <div className="prose prose-lg text-muted-foreground">
                 <p className="mb-4">
-                  We are one of the leading manufacturers and suppliers of premium quality mineral fillers and extenders including Quartz Powder, Quartz Grits, Calcite Powder, Dolomite Powder, Talc Powder, and Coated minerals in Rajasthan, India.
+                  We are one of the leading Manufacturer and Supplier of Premium Quality Minerals Filler and Extender like Quartz Powder, Quartz Grits, Calcite Powder, Dolomite Powder, Dolomite Grits, Coated Calcite and Coated Dolomite powder  in Rajasthan, India.Our product’s serve in various Industries such as Paints, Plastic (Pipes ,PVC, Cables), Rubber, Detergents, Polymers, Agriculture, Glass, Ceramic, Slab (Countertop), Construction and Fertilizer.
                 </p>
-                <p>
-                  Our products serve key industries including Paints, Plastics, Rubber, Glass, Ceramics, Agriculture, Pharmaceuticals, and Construction.
-                </p>
+                
               </div>
             </div>
           </div>
@@ -56,7 +54,7 @@ const About = () => {
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 bg-card rounded-full overflow-hidden shadow-xl mx-auto">
                   <div className="w-full h-full bg-accent/10 flex items-center justify-center">
-                    <User className="w-32 h-32 text-accent/50" />
+                    <img src="https://i.ibb.co/1JXrYjVZ/Founder.jpg"></img>
                   </div>
                 </div>
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-6 py-3 rounded-lg shadow-xl">
@@ -72,7 +70,8 @@ const About = () => {
                   Founder & Managing Director
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  With over 15 years of experience in industrial minerals and expertise in mineral grinding, Mr. Rajesh Doot founded Stonex Enterprises in 2011 with a vision to deliver the finest quality mineral products to industries across India and beyond.
+                  Our Company was established by RAJESH DOOT in 2011, over 15 years of experience in various industrial minerals as well as expertise in mineral grinding, mining and maintaining high quality standard of product. We operate multiple factories across Rajasthan. For achieving High Quality Standard we operate advance production unit equipped with Ball Mills, Micronizer, 28 Roller with Classifier Machine, Automatic Grits Colour Shorter Machine, Gitti Shorting Machine,
+Magnetic Shorting Machine, Powder Coating Machine, and Pebbles Machine. Our success can be largely credited to our skilled, disciplined & motivated employees, who continuously & collectively strive to deliver the best. Today we have a production capacity of more than 180000 MT per Annum.
                 </p>
               </div>
             </div>
@@ -89,7 +88,7 @@ const About = () => {
                 </div>
                 <h3 className="font-heading font-bold text-2xl text-foreground mb-4">Our Vision</h3>
                 <p className="text-muted-foreground">
-                  To be India's most trusted and preferred mineral solutions provider, known for quality, innovation, and customer satisfaction across diverse industries.
+                  To be India's most trusted and preferred industrial mineral solutions provider, known for quality, innovation, and customer satisfaction across diverse industries.
                 </p>
               </div>
               <div className="bg-card p-8 rounded-lg shadow-md">
@@ -98,7 +97,7 @@ const About = () => {
                 </div>
                 <h3 className="font-heading font-bold text-2xl text-foreground mb-4">Our Mission</h3>
                 <p className="text-muted-foreground">
-                  To deliver consistent, high-quality mineral products through advanced technology, sustainable practices, and a commitment to meeting our customers' unique requirements.
+                  To deliver consistent, high-quality industrial mineral products through advanced technology, sustainable practices, and a commitment to meeting our customers' unique requirements.
                 </p>
               </div>
             </div>
@@ -141,21 +140,21 @@ const About = () => {
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="font-heading font-bold text-4xl md:text-5xl text-primary-foreground mb-2">
-                  4,000+ MT
+                  180,000+ MT
                 </div>
-                <p className="text-primary-foreground/70">Monthly Production</p>
+                <p className="text-primary-foreground/70">Annual Production</p>
               </div>
               <div>
                 <div className="font-heading font-bold text-4xl md:text-5xl text-primary-foreground mb-2">
-                  50,000+ MT
+                  8
                 </div>
-                <p className="text-primary-foreground/70">Annual Capacity</p>
+                <p className="text-primary-foreground/70">Plants</p>
               </div>
               <div>
                 <div className="font-heading font-bold text-4xl md:text-5xl text-primary-foreground mb-2">
-                  8+
+                  2
                 </div>
-                <p className="text-primary-foreground/70">Plants & Mines</p>
+                <p className="text-primary-foreground/70">Mines</p>
               </div>
             </div>
           </div>

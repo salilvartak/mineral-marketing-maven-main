@@ -56,7 +56,7 @@ const Products = () => {
                 Our Products
               </h1>
               <p className="text-xl text-primary-foreground/90">
-                Premium quality mineral fillers and extenders for diverse industrial applications
+                Premium quality mineral industrial   fillers and extenders for diverse industrial applications
               </p>
             </div>
           </div>
