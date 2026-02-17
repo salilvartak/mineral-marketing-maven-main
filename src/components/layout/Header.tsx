@@ -10,7 +10,7 @@ const productLinks = [
   { name: "Dolomite Powder", slug: "dolomite-powder" },
   { name: "Quartz Powder", slug: "quartz-powder" },
   { name: "Quartz Grits", slug: "quartz-grits" },
-  { name: "Talc Powder", slug: "talc-powder" },
+  { name: "Pebbles", slug: "pebble" },
   { name: "Coated Calcite", slug: "coated-calcite" },
   { name: "Coated Dolomite", slug: "coated-dolomite" },
 ];

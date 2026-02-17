@@ -353,6 +353,8 @@ const ProductDetail = () => {
   }
 
   const isQuartzGrits = productId === "quartz-grits";
+  const isPebble = productId === "pebble";
+  const isCoated = productId === "coated-calcite" || productId === "coated-dolomite";
 
   return (
     <div className="min-h-screen">
@@ -484,6 +486,81 @@ const ProductDetail = () => {
             <p className="text-muted-foreground text-lg leading-relaxed">{product.whatIs}</p>
           </div>
         </section>
+
+        {/* Pebble Types Section */}
+        {isPebble && (
+          <section className="py-12 bg-muted">
+            <div className="container mx-auto px-4">
+              <h2 className="font-heading font-bold text-2xl text-foreground mb-6">Types of Pebble Stones</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-card p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="font-heading font-semibold text-xl text-foreground mb-3">Marble Pebbles</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    These polished stones come in white and other light colors. They bring a sense of elegance
+                    and are often used in upscale landscapes and indoor spaces.
+                  </p>
+                </div>
+                <div className="bg-card p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="font-heading font-semibold text-xl text-foreground mb-3">Polished Pebbles</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Manually polished to give them a shiny finish, these pebbles add a luxurious touch and
+                    are perfect for both decorative and functional uses in interiors and exteriors.
+                  </p>
+                </div>
+                <div className="bg-card p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="font-heading font-semibold text-xl text-foreground mb-3">River Pebbles</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    They naturally acquire a smooth and rounded shape as they continue to flow in rivers and
+                    gradually wear away at the edges. Available in a variety of sizes and colours, they are
+                    often used in water features, pathways and garden beds.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Coated Benefits Section */}
+        {isCoated && (
+          <section className="py-12 bg-muted">
+            <div className="container mx-auto px-4">
+              <h2 className="font-heading font-bold text-2xl text-foreground mb-6">Key benefits of the Coating</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  {
+                    title: "Improved Dispersion",
+                    desc: "The treatment helps the powder mix uniformly into various matrices, preventing clumping."
+                  },
+                  {
+                    title: "Reduced Moisture Absorption",
+                    desc: "The coating forms a protective barrier, reducing moisture absorption."
+                  },
+                  {
+                    title: "Enhanced Mechanical Properties",
+                    desc: "It improves impact strength, stiffness, flow rate, and dimensional stability."
+                  },
+                  {
+                    title: "Better Aesthetics",
+                    desc: "It can enhance whiteness, gloss, and opacity in paints and powder coatings."
+                  },
+                  {
+                    title: "Hydrophobic Surface",
+                    desc: "Reduces moisture absorption and improves stability."
+                  },
+                  {
+                    title: "Cost-Effectiveness",
+                    desc: "Reduces raw material costs in formulations."
+                  }
+                ].map((item, index) => (
+                  <div key={index} className="bg-card p-6 rounded-lg shadow-md border-l-4 border-accent">
+                    <h3 className="font-heading font-semibold text-lg text-foreground mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Particle Sizes */}
         <section className="py-12 bg-background">

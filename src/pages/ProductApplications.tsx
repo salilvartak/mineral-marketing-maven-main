@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, CheckCircle2, ArrowRight } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 // --- Data Structure ---
@@ -19,7 +19,7 @@ const applicationsData: Record<string, {
     sections: [
       {
         title: "Paints and Coatings",
-        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80",
+        image: "https://media.licdn.com/dms/image/v2/D5612AQGH6-teIRYb4Q/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1739041660313?e=2147483647&v=beta&t=petzcu1ZMEiFfq9uX9HH3Ys3wpKy5EyQ0MriMX1PzII",
         points: [
           "Used as a Filler to provide Brightness, Opacity, Whiteness and reduce costs.",
           "Improves flow Characteristics, covering strength and texture.",
@@ -29,26 +29,26 @@ const applicationsData: Record<string, {
       },
       {
         title: "Paper Manufacturing",
-        image: "https://images.unsplash.com/photo-1603842602330-9b3780360492?w=800&q=80",
+        image: "https://knnindia.co.in/uploads/newsfiles/Paper-Industry.jpg",
         points: [
           "A bright white Calcium Carbonate added to paper pulp as a filler in alkaline papers or applied as a coating pigment.",
           "Calcite powder is an ideal component for producing writing, printing, and packaging grade paper.",
-          "Improves Brightness, Opacity, and Smoothness while reducing the use of costly wood pulp.",
+          "Improve Brightness and Opacity and Smoothness and reduces the use of costly wood pulp.",
           "It is a type of mineral filler that brings down the overall production cost of manufacturing paper.",
         ],
       },
       {
         title: "Plastics and Polymers",
-        image: "https://images.unsplash.com/photo-1622329775330-9b3780360492?w=800&q=80",
+        image: "https://blog.industryinform.com/wp-content/uploads/2018/07/Plastics_industry_2.jpg",
         points: [
           "Is a primary filler in various polymers (PVC, PE, PP) to reduce production costs, improve dimensional stability, enhance rigidity, and provide a smooth surface finish.",
-          "Increases humidity retention and consistency in plastic.",
-          "It is used in products like pipes, automotive parts, furniture, film, and packaging materials.",
+          "Increase Humidity retention and consistency in plastic.",
+          "It is used in products like pipes, automotive parts, furniture, film and packaging materials.",
         ],
       },
       {
         title: "Glass and Ceramics",
-        image: "https://images.unsplash.com/photo-1590422946252-87063467669d?w=800&q=80",
+        image: "https://www.olmec.co.uk/wp-content/uploads/2020/08/glass_ceramics-1.jpg",
         points: [
           "Calcite powder is an important component in glass making and is used as a stabilizer which improves the mechanical properties and physical appearance of the glass.",
           "In Ceramics it helps control shrinkage during firing and acts as a flux in glazes to lower melting points.",
@@ -56,11 +56,27 @@ const applicationsData: Record<string, {
       },
       {
         title: "Rubber Industry",
-        image: "https://images.unsplash.com/photo-1552353617-66a9829f7f45?w=800&q=80",
+        image: "https://www.airbench.com/wp-content/uploads/rubber-tires.jpg.webp",
         points: [
-          "In Rubber industries Calcite Powder is one of the prominent minerals due its performance factor.",
+          "In Rubber industries Calcite Powder is one of the prominent mineral due its performance factor.",
           "It is used as a reinforcing filler to improve flexibility, durability, tear resistance, and overall mechanical performance while reducing the amount of expensive rubber required.",
-          "Acts as a volume enhancer and stabilizer in Rubber.",
+          "Act as a volume enhancer and stabilizer in Rubber.",
+        ],
+      },
+      {
+        title: "Agriculture and Feed",
+        image: "https://www.innovationnewsnetwork.com/wp-content/uploads/2025/06/shutterstock_1925688962.jpg",
+        points: [
+          "Function as a Soil Conditioner to neutralize acidic soil and provide calcium to plants.",
+          "Used in Livestock to provide essential calcium for healthy growth and metabolism.",
+        ],
+      },
+      {
+        title: "Adhesives and Sealants",
+        image: "https://parsonadhesives.in/wp-content/uploads/2023/10/505813c81f.jpeg",
+        points: [
+          "Calcite powder improve viscosity and enhance physical strength.",
+          "Cost effective.",
         ],
       },
     ],
@@ -69,39 +85,115 @@ const applicationsData: Record<string, {
     name: "Dolomite Powder",
     sections: [
       {
-        title: "Glass & Ceramics",
-        image: "https://images.unsplash.com/photo-1565610261709-67d93d56d10c?w=800&q=80",
+        title: "Paint and Coating",
+        image: "https://media.licdn.com/dms/image/v2/D5612AQGH6-teIRYb4Q/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1739041660313?e=2147483647&v=beta&t=petzcu1ZMEiFfq9uX9HH3Ys3wpKy5EyQ0MriMX1PzII",
         points: [
-          "Acts as a flux material to lower melting points in glass production.",
-          "Enhances thermal stability and durability of the final product.",
-          "Improves the mechanical properties of ceramic bodies.",
+          "Use as a Filler to provide Brightness, Opacity, Whiteness and reduce costs.",
+          "Dolomite Powder provides excellent weather resistance for outdoor paints.",
+          "Micronized Dolomite Powder is readily soluble in water. Hence, it is used as an extender in water based paints like emulsions, distemper.",
+          "Due to its Brightness and Whiteness properties it use in Primer and Putties.",
+          "Its low oil absorption capacity helps maintain a balanced PH value and reduces the amount of binder needed in the formulation."
+        ],
+      },
+      {
+        title: "Paper Manufacturing",
+        image: "https://knnindia.co.in/uploads/newsfiles/Paper-Industry.jpg",
+        points: [
+          "Its natural pure white color increases the whiteness of the paper, significantly reducing the need for expensive optical brighteners.",
+          "Use as a filler that imparts smoothness, luster, and gloss to printing paper.",
+          "Dolomite conserves less water and increases the volume of water extracted from the pulp, which speeds up the overall output.",
+          "It helps maintain the moisture and pH levels of the pulp.",
+          "It is highly cost-effective, helping manufacturers decrease overall production costs by substituting for more expensive raw materials."
+        ],
+      },
+      {
+        title: "Glass and Ceramics",
+        image: "https://www.olmec.co.uk/wp-content/uploads/2020/08/glass_ceramics-1.jpg",
+        points: [
+          "Dolomite Powder use as a Stabilizer and Flux in glass making.",
+          "Calcium and Magnesium both elements improve glass quality, hardness and durability.",
+          "Magnesia (MgO) in the dolomite reduces unwanted crystallization (devitrification) during the cooling process, which is essential for producing high-quality transparent glass.",
+          "Its low thermal expansion and lack of reactivity with other substances makes it a popular choice for adding strength and durability to ceramic items.",
+          "Dolomite use in Ceramics as a Flux, strength enhancer and glaze component.",
+          "Calcium and Magnesium to improve mechanical strength, durability, and surface finish in tiles, sanitary ware, and pottery."
         ],
       },
       {
         title: "Agriculture",
-        image: "https://images.unsplash.com/photo-1625246333195-58197bd47d26?w=800&q=80",
+        image: "https://images.stockcake.com/public/8/c/7/8c7936bc-2068-4f27-8387-6b7e617c6b8c_large/agriculture-meets-industry-stockcake.jpg",
         points: [
-          "Used for soil conditioning to neutralize acidity (pH correction).",
-          "Provides an essential magnesium supplement for crops.",
-          "Improves soil structure and nutrient absorption.",
+          "Dolomite Powder widely used in Agriculture for soil conditioning.",
+          "Both Calcium and Magnesium are beneficial to soil for providing essential plant nutrients.",
+          "Dolomite neutralize the Acidic Soil or Ph level and improve soil fertility.",
+          "It Improve the efficiency of fertilizer by adding Dolomite powder in fertilizer."
         ],
       },
       {
         title: "Construction",
-        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
+        image: "https://www.colliers.com/-/media/images/colliers/asia/india/1536x1040_08022024.ashx?bid=f4a70a56b86f4e79bf7fe4d4234900cb",
         points: [
-          "Key ingredient in building materials and cement additives.",
-          "Used in road construction for stability and durability.",
-          "Acts as a filler in concrete and asphalt mixtures.",
+          "Dolomite powder is a versatile and essential material in the construction industry, where it is primarily used as an aggregate, a filler, and an additive to enhance the strength, durability, water resistance and work ability of various materials.",
+          "Used as a flux in steel production to improve the strength and hardness of the material.",
+          "Due to its unique chemical & physical properties Dolomite Powder use in Concrete, Asphalt, Wall putty, Plaster, Cement."
         ],
       },
       {
-        title: "Steel Industry",
-        image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&q=80",
+        title: "Plastics and Polymers",
+        image: "https://blog.industryinform.com/wp-content/uploads/2018/07/Plastics_industry_2.jpg",
         points: [
-          "Used as a flux in iron making to lower impurities.",
-          "Assists in slag formation and sulfur removal.",
-          "Refractory material for lining furnaces.",
+          "Dolomite Powder is a primary filler in various polymers (PVC, PE, PP) to reduce production costs, improve dimensional stability, enhance rigidity, and provide a smooth surface finish.",
+          "Increase Humidity retention and consistency in plastic.",
+          "It is used in products like pipes, automotive parts, furniture, film and packaging materials."
+        ],
+      },
+      {
+        title: "Rubber Industry",
+        image: "https://www.airbench.com/wp-content/uploads/rubber-tires.jpg.webp",
+        points: [
+          "In Rubber industries Dolomite Powder is one of the prominent mineral due its performance factor.",
+          "It is used as a reinforcing filler to improve flexibility, durability, tear resistance, and overall mechanical performance while reducing the amount of expensive rubber required.",
+          "Act as a volume enhancer and stabilizer in Rubber."
+        ],
+      },
+    ],
+  },
+  "dolomite-grits": {
+    name: "Dolomite Grits",
+    sections: [
+      {
+        title: "Construction",
+        image: "https://www.colliers.com/-/media/images/colliers/asia/india/1536x1040_08022024.ashx?bid=f4a70a56b86f4e79bf7fe4d4234900cb",
+        points: [
+          "Dolomite Grits is a versatile and essential material in the construction industry, where it is primarily used as an aggregate, a filler, and an additive to enhance the strength, durability, water resistance and work ability of various materials.",
+          "Due to its unique chemical & physical properties Dolomite Powder use in Concrete, Asphalt, Wall putty, Plaster, Cement",
+          "Dolomite is a standard aggregate in concrete mixes and asphalt for roads, bridges, and buildings, helping to reduce cracking and maintain stability under heavy loads."
+        ],
+      },
+      {
+        title: "Agriculture",
+        image: "https://images.stockcake.com/public/8/c/7/8c7936bc-2068-4f27-8387-6b7e617c6b8c_large/agriculture-meets-industry-stockcake.jpg",
+        points: [
+          "Dolomite neutralizes acidic soils, increasing pH to levels that enhance nutrient availability and microbial activity.",
+          "Dolomite is a rich source of Calcium and Magnesium which are beneficial to soil for providing essential plant nutrients.",
+          "It Improve the efficiency of fertilizer by adding Dolomite powder in fertilizer."
+        ],
+      },
+      {
+        title: "Glass",
+        image: "https://www.processparameters.co.uk/wp-content/uploads/2023/07/Glass-manufacturing-process.jpg",
+        points: [
+          "Dolomite use as a Stabilizer and Flux in glass making.",
+          "Calcium and Magnesium both elements improve glass quality, hardness and durability.",
+          "Magnesia (MgO) in the dolomite reduces unwanted crystallization (devitrification) during the cooling process, which is essential for producing high-quality transparent glass."
+        ],
+      },
+      {
+        title: "Iron & Steel Industry",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvIasWdt9AwAjORhjiaTPtXswFPuurmTQR9A&s",
+        points: [
+          "Dolomite extensively use in Iron & Steel industry because of their chemical properties.",
+          "Dolomite act as a metallurgical fluxing agent to remove impurities like silica and phosphorus and stabilize the molten metal during the sintering process.",
+          "Dolomite is also used to produce refractory bricks for furnace linings due to its high heat resistance."
         ],
       },
     ],
@@ -110,30 +202,64 @@ const applicationsData: Record<string, {
     name: "Quartz Powder",
     sections: [
       {
-        title: "Slab Manufacturing",
-        image: "https://images.unsplash.com/photo-1581093583449-ed2521344463?w=800&q=80",
+        title: "Countertops/Slabs",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/11/359646957/UV/UL/DL/69656835/kitchen-countertop-granite-slab.jpg",
         points: [
-          "Primary raw material for Quartz slabs and Engineered stone.",
-          "Provides extreme hardness and durability to countertops.",
-          "Ensures consistent color and texture in artificial stone.",
+          "Quartz countertops are tops composed of agglomerates of resins and quartz powders, available in various colors.",
+          "Quartz countertops are capable of giving elegance and prestige to the kitchen, but also because it is extremely convenient in terms of resistance, versatility and durability."
         ],
       },
       {
-        title: "Glass Industry",
-        image: "https://images.unsplash.com/photo-1506720456291-38317fb661c9?w=800&q=80",
+        title: "Glass Manufacturing",
+        image: "https://www.processparameters.co.uk/wp-content/uploads/2023/07/Glass-manufacturing-process.jpg",
         points: [
-          "Essential silica source for container glass and flat glass.",
-          "Improves clarity and thermal shock resistance.",
-          "Used in specialty glass manufacturing.",
+          "Quartz is an important mineral for the glass industry because glass is made using silica dioxide which is colourless quartz.",
+          "As the main component of glass, high-purity quartz powder is essential for producing flat glass, container glass, and specialty items like optical glass and laboratory ware (lenses, telescopes, microscopes, and electronic sensors), enhancing clarity and heat resistance."
         ],
       },
       {
-        title: "Construction & Paints",
-        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80",
+        title: "Paint and Coating",
+        image: "https://media.licdn.com/dms/image/v2/D5612AQGH6-teIRYb4Q/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1739041660313?e=2147483647&v=beta&t=petzcu1ZMEiFfq9uX9HH3Ys3wpKy5EyQ0MriMX1PzII",
         points: [
-          "Functional filler in paints for abrasion resistance.",
-          "Used in concrete additives and flooring solutions.",
-          "Enhances the durability of exterior coatings.",
+          "Quartz powder is used as a filler and extender in the paints and coatings industry to enhance the texture and finish of the products",
+          "Due to its high hardness (7 on the Mohs scale), Quartz powder acts as a strengthening agent, making the paint film resistant to physical damage like abrasion, scratching, impact, and general wear and tear.",
+          "Due to its Superior Weather Resistance it prevents premature fading, cracking, and peeling.",
+          "Due to its Chemical and Stain Resistance of Quartz makes paints and coatings highly resistant to corrosive media such as acids, alkalis, solvents, and chemicals.",
+          "Quartz powder is a versatile and valuable additive that significantly boosts the performance, longevity, and appearance of paints and coatings."
+        ],
+      },
+      {
+        title: "Ceramics",
+        image: "https://b2bindustry.net/wp-content/uploads/ceramics-industry.jpg",
+        points: [
+          "Quartz powder plays an essential role in the production of different ceramic products such as tiles, sanitary ware, porcelain.",
+          "While using Quartz Powder in Ceramic Industry used to provide Structural Integrity, enhance Strength and Durability, Reduces Shrinkage, Improve Thermal Stability.",
+          "Quartz powder leads to a smooth surface finish."
+        ],
+      },
+      {
+        title: "Industrial Abrasives",
+        image: "https://binicabrasive.com/wp-content/uploads/2025/09/industrial-abrasive-tools.webp",
+        points: [
+          "Quartz powder is used as an abrasive material in different industrial applications due to its Inherent Hardness, Durability, High Melting Point, Gritty texture, and Chemical Stability.",
+          "Quartz Powder use in Sand Blasting, Grinding, Polishing, Stone Cutting, Sandpaper, Abrasive Cloths, Scouring Cleaners."
+        ],
+      },
+      {
+        title: "Foundry Application",
+        image: "https://chromitesand.net/wp-content/uploads/2024/06/foundry.jpg",
+        points: [
+          "Quartz powder is extensively used in foundry applications. manufacture of molds and cores to be used in metal casting.",
+          "Quartz powder has a high melting point and low thermal expansion, which means it's possible to make a various types of mold.",
+          "It provides a better finish and more accuracy of dimension in castings, due to its fine size in particle form."
+        ],
+      },
+      {
+        title: "Electronic Application",
+        image: "https://www.open.edu/openlearn/pluginfile.php/2481055/tool_ocwmanage/image/0/t312_OLHP_786x400.jpg",
+        points: [
+          "Due to their piezoelectric properties (generating an electric charge under mechanical stress), quartz crystals and grains are essential for manufacturing oscillators, resonators, and filters used in watches, radios, computers, and mobile phones.",
+          "High-purity quartz is also used to produce silicon chips for semiconductors and solar panels."
         ],
       },
     ],
@@ -142,99 +268,181 @@ const applicationsData: Record<string, {
     name: "Quartz Grits",
     sections: [
       {
-        title: "Water Filtration",
-        image: "https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=800&q=80",
+        title: "Countertops/Slabs",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/11/359646957/UV/UL/DL/69656835/kitchen-countertop-granite-slab.jpg",
         points: [
-          "Standard media for swimming pool filters and water treatment plants.",
-          "High silica content ensures effective removal of impurities.",
-          "Durable particles resist degradation during backwashing.",
+          "Quartz countertops are tops composed of agglomerates of resins and quartz powders, available in various colors.",
+          "Quartz countertops are capable of giving elegance and prestige to the kitchen, but also because it is extremely convenient in terms of resistance, versatility and durability."
         ],
       },
       {
-        title: "Surface Finishing",
-        image: "https://images.unsplash.com/photo-1590059599723-b6d31846152b?w=800&q=80",
+        title: "Glass Manufacturing",
+        image: "https://www.processparameters.co.uk/wp-content/uploads/2023/07/Glass-manufacturing-process.jpg",
         points: [
-          "Used in sandblasting for surface preparation and cleaning.",
-          "Provides uniform texturing on metals and stone.",
-          "Effective for rust removal and paint stripping.",
+          "Quartz is an important mineral for the glass industry because glass is made using silica dioxide which is colourless quartz.",
+          "As the main component of glass, high-purity Quartz Grits is essential for producing flat glass, container glass, and specialty items like optical glass and laboratory ware (lenses, telescopes, microscopes, and electronic sensors), enhancing clarity and heat resistance."
         ],
       },
       {
-        title: "Construction & Decor",
-        image: "https://images.unsplash.com/photo-1518118029519-86641887dc74?w=800&q=80",
+        title: "Electronic Application",
+        image: "https://www.open.edu/openlearn/pluginfile.php/2481055/tool_ocwmanage/image/0/t312_OLHP_786x400.jpg",
         points: [
-          "Used in epoxy flooring for anti-skid surfaces.",
-          "Decorative aggregates for landscaping and aquariums.",
-          "Texture additive for specialized plasters.",
-        ],
-      },
-    ],
-  },
-  "talc-powder": {
-    name: "Talc Powder",
-    sections: [
-      {
-        title: "Pharmaceuticals & Cosmetics",
-        image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80",
-        points: [
-          "Lubricant and filler in tablet manufacturing.",
-          "Base for talcum powder, face powder, and body powders.",
-          "Provides soft texture and prevents caking in cosmetics.",
+          "Due to their piezoelectric properties (generating an electric charge under mechanical stress), quartz crystals and grains are essential for manufacturing oscillators, resonators, and filters used in watches, radios, computers, and mobile phones.",
+          "High-purity quartz is also used to produce silicon chips for semiconductors and solar panels."
         ],
       },
       {
-        title: "Rubber & Plastics",
-        image: "https://images.unsplash.com/photo-1523293836414-90ab390ea659?w=800&q=80",
+        title: "Industrial Abrasives",
+        image: "https://binicabrasive.com/wp-content/uploads/2025/09/industrial-abrasive-tools.webp",
         points: [
-          "Reinforcing filler that improves stiffness and dimensional stability.",
-          "Acts as a processing aid to reduce viscosity.",
-          "Enhances surface quality and heat resistance.",
+          "Quartz is used as an abrasive material in different industrial applications due to its Inherent Hardness, Durability, High Melting Point, Gritty texture, and Chemical Stability.",
+          "Quartz use in Sand Blasting, Grinding, Polishing, Stone Cutting, Sandpaper, Abrasive Cloths, Scouring Cleaners."
+        ],
+      },
+      {
+        title: "Paint and Coating",
+        image: "https://media.licdn.com/dms/image/v2/D5612AQGH6-teIRYb4Q/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1739041660313?e=2147483647&v=beta&t=petzcu1ZMEiFfq9uX9HH3Ys3wpKy5EyQ0MriMX1PzII",
+        points: [
+          "Quartz is used as a filler and extender in the paints and coatings industry to enhance the texture and finish of the products",
+          "Due to its high hardness (7 on the Mohs scale), Quartz powder acts as a strengthening agent, making the paint film resistant to physical damage like abrasion, scratching, impact, and general wear and tear.",
+          "Due to its Superior Weather Resistance it prevents premature fading, cracking, and peeling.",
+          "Due to its Chemical and Stain Resistance of Quartz makes paints and coatings highly resistant to corrosive media such as acids, alkalis, solvents, and chemicals.",
+          "Quartz powder is a versatile and valuable additive that significantly boosts the performance, longevity, and appearance of paints and coatings."
+        ],
+      },
+      {
+        title: "Ceramics",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtOe_bmMn3gxPdqZGqEM6Grz-EeGAxEKv2zA&s",
+        points: [
+          "Quartz plays an essential role in the production of different ceramic products such as tiles, sanitary ware, porcelain.",
+          "While using Quartz in Ceramic Industry used to provide Structural Integrity, enhance Strength and Durability, Reduces Shrinkage, Improve Thermal Stability.",
+          "Quartz powder leads to a smooth surface finish."
+        ],
+      },
+      {
+        title: "Foundry Application",
+        image: "https://chromitesand.net/wp-content/uploads/2024/06/foundry.jpg",
+        points: [
+          "In metal casting, quartz sand is used to create molds and cores due to its high heat resistance and thermal stability, which ensures the accuracy and quality of the cast products."
+        ],
+      },
+      {
+        title: "Construction Materials",
+        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
+        points: [
+          "Quartz grains are a vital aggregate in cement, concrete, mortar, and asphalt, where they enhance strength, durability, and resistance to weathering.",
+          "They are also used in manufacturing artificial marble and quartz slabs for countertop's and flooring."
         ],
       },
     ],
   },
   "coated-calcite": {
-    name: "Coated Calcite",
+    name: "Coated Calcite Powder",
     sections: [
       {
-        title: "PVC & Polymers",
-        image: "https://images.unsplash.com/photo-1622329775330-9b3780360492?w=800&q=80",
+        title: "Plastics and Polymers",
+        image: "https://blog.industryinform.com/wp-content/uploads/2018/07/Plastics_industry_2.jpg",
         points: [
-          "Essential for PVC pipes, fittings, and profiles.",
-          "Stearic acid coating improves dispersion in polymer matrices.",
-          "Reduces processing torque and wear on machinery.",
+          "It acts as an economical filler that improves the mechanical properties (stiffness, impact resistance), dimensional stability, and heat stability of the final plastic products, while also reducing overall production costs.",
+          "Due to excellent properties Coated Calcite powder widely use in PVC pipes, films, automotive parts electrical component and plastics sheets."
         ],
       },
       {
-        title: "Cable Compounds",
-        image: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=800&q=80",
+        title: "Paint and Coating",
+        image: "https://media.licdn.com/dms/image/v2/D5612AQGH6-teIRYb4Q/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1739041660313?e=2147483647&v=beta&t=petzcu1ZMEiFfq9uX9HH3Ys3wpKy5EyQ0MriMX1PzII",
         points: [
-          "Used in insulation and sheathing for electrical cables.",
-          "Lowers moisture absorption compared to uncoated fillers.",
-          "Maintains electrical properties and flexibility.",
+          "In Paint and Coating Coated Calcite powder is used as an extender pigment to enhance the opacity, brightness, and durability of paints.",
+          "Coated Calcite powder reduce coat by replacing more expensive pigments like Titanium Dioxide.",
+          "The coating improves weather resistance and provides better rheological (flow) properties for the paint."
+        ],
+      },
+      {
+        title: "Rubber Industry",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHjMqzAkLghu9rpC8FqEmV6GlfKbtv1Sn3Jw&s",
+        points: [
+          "In Rubber industries Coated Calcite Powder is one of the prominent mineral due its performance factor.",
+          "It is used as a reinforcing filler to improve flexibility, durability, tear resistance, and overall mechanical performance while reducing the amount of expensive rubber required.",
+          "Act as a volume enhancer and stabilizer in Rubber."
+        ],
+      },
+      {
+        title: "Paper Manufacturing",
+        image: "https://knnindia.co.in/uploads/newsfiles/Paper-Industry.jpg",
+        points: [
+          "Coated Calcite powder is an ideal component for producing writing, printing, and packaging grade paper.",
+          "Improve Brightness and Opacity and Smoothness and reduces the use of costly wood pulp.",
+          "It is a type of mineral filler that brings down the overall production cost of manufacturing paper."
+        ],
+      },
+      {
+        title: "Adhesives and Sealants",
+        image: "https://www.tech-masters.com/files/5c/a5bfd1b5dc0e27a81e726fbef1ce4d/Adhesives%20%26%20Sealants%20Kopie_2000x900_10.jpg",
+        points: [
+          "It is incorporated to improve bonding strength, control viscosity, reduce shrinkage, and act as a functional filler in various adhesive and sealant formulations."
         ],
       },
     ],
   },
   "coated-dolomite": {
-    name: "Coated Dolomite",
+    name: "Coated Dolomite Powder",
     sections: [
       {
-        title: "Plastics & Rubber",
-        image: "https://images.unsplash.com/photo-1605307374020-f5a6b0c61980?w=800&q=80",
+        title: "Plastics and Polymers",
+        image: "https://blog.industryinform.com/wp-content/uploads/2018/07/Plastics_industry_2.jpg",
         points: [
-          "Surface-treated for compatibility with PP and PE compounds.",
-          "Used in tire industry and industrial rubber goods.",
-          "Provides better impact strength and stiffness balance.",
+          "It acts as an economical filler that improves the mechanical properties (stiffness, impact resistance), dimensional stability, and heat stability of the final plastic products, while also reducing overall production costs.",
+          "Due to excellent properties Coated Dolomite powder widely use in PVC pipes, films, automotive parts electrical component and plastics sheets."
         ],
       },
       {
-        title: "Adhesives & Sealants",
-        image: "https://images.unsplash.com/photo-1581092921461-eab6245b0262?w=800&q=80",
+        title: "Paint and Coating",
+        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80",
         points: [
-          "Filler for silicone and PU sealants.",
-          "Low moisture content ensures longer shelf life of sealants.",
-          "Cost-effective alternative to other functional fillers.",
+          "In Paint and Coating Coated Dolomite powder is used as an extender pigment to enhance the opacity, brightness, and durability of paints.",
+          "The coating improves weather resistance and provides better rheological (flow) properties for the paint."
+        ],
+      },
+      {
+        title: "Rubber Industry",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHjMqzAkLghu9rpC8FqEmV6GlfKbtv1Sn3Jw&s",
+        points: [
+          "In Rubber industries Coated Dolomite Powder is one of the prominent mineral due its performance factor.",
+          "It is used as a reinforcing filler to improve flexibility, durability, tear resistance, and overall mechanical performance while reducing the amount of expensive rubber required.",
+          "Act as a volume enhancer and stabilizer in Rubber."
+        ],
+      },
+      {
+        title: "Adhesives and Sealants",
+        image: "https://www.tech-masters.com/files/5c/a5bfd1b5dc0e27a81e726fbef1ce4d/Adhesives%20%26%20Sealants%20Kopie_2000x900_10.jpg",
+        points: [
+          "It is incorporated to improve bonding strength, control viscosity, reduce shrinkage, and act as a functional filler in various adhesive and sealant formulations."
+        ],
+      },
+    ],
+  },
+  "pebble": {
+    name: "Pebble",
+    sections: [
+      {
+        title: "Uses in Landscaping",
+        image: "https://cdn.shopify.com/s/files/1/0717/5271/2479/files/Gardening-stones-on-pathway_75a2af72-baf5-4986-b2b0-b3e3e9ca79b1_1024x1024.jpg?v=1679737218",
+        points: [
+          "Garden Borders: Pebbles are a great way to cover garden soil, providing a polished look while helping to retain moisture and prevent weeds.",
+          "Pathways: Pebble stone pathways create a natural, inviting look in gardens or entryways, offering a soft and comfortable walking surface that complements plants and other landscaping elements.",
+          "Water Features: Whether it's a pond, fountain, or waterfall, adding pebbles enhances water features by adding texture and colour, creating a serene, spa-like ambiance.",
+          "Driveways and Patios: Pebbles can be used to cover entire surfaces or to accentuate design elements in driveways and patios, bringing depth and sophistication to these areas.",
+          "Zen and Rock Gardens: Inspired by traditional Japanese gardens, pebbles are essential in creating minimalist and peaceful rock gardens or Zen spaces. Their clean look and neutral colours foster relaxation and simplicity.",
+          "Planters and Flower Pots: Small pebbles are great for topping soil in pots, adding aesthetic value while helping with drainage. They're also ideal for creating succulent and cactus arrangements."
+        ],
+      },
+      {
+        title: "Health Benefits",
+        image: "https://vital-wellbeing.com/wp-content/uploads/2019/09/walking-on-stones-proprioception-shutterstock_211023196-188575_1080x675.jpg",
+        points: [
+          "Stimulates Acupressure Points: The soles of the feet contain numerous nerve endings and acupressure points connected to various organs and systems in the body. Stimulating these points can improve energy flow and circulation.",
+          "Enhances Blood Circulation: Applying pressure to the feet encourages better blood flow throughout the body, delivering more oxygen and nutrients to tissues.",
+          "Reduces Stress and Anxiety: The meditative nature of focusing on foot placement while walking on pebbles, combined with the sensory experience, can help calm the mind and lower stress levels.",
+          "Improves Sleep Quality: The calming effect and nerve stimulation may contribute to better relaxation and more restful sleep, making it helpful for those with insomnia."
         ],
       },
     ],
