@@ -9,12 +9,12 @@ const mineLocations = [
   { 
     name: "Ajmer, Nasirabad, Rajasthan", 
     minerals: "Quartz",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80" 
+    image: "https://samasinc.com/wp-content/uploads/2025/02/chris-6LNv5BmYuvI-unsplash-scaled.jpg" 
   },
   { 
     name: "Makrana, Rajasthan", 
     minerals: "Calcite",
-    image: "https://images.unsplash.com/photo-1629196914375-f7e48f477b6d?w=800&q=80"
+    image: "https://ptso1.com/wp-content/uploads/2016/02/IMG_0254.jpg"
   },
   
 ];

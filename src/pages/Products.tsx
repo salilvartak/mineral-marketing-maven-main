@@ -8,50 +8,50 @@ const products = [
     id: "calcite-powder",
     name: "Calcite Powder",
     purity: "98%+",
-    image: "src/assets/images/calcite-powder.png",
+    image: "https://i.ibb.co/pHbVhwp/calcite-powder.png",
   },
   {
     id: "dolomite-powder",
     name: "Dolomite Powder",
     purity: "97%+",
-    image: "src/assets/images/dolomite-powder.jpeg",
+    image: "https://i.ibb.co/XfxJ9GLw/dolomite-powder.jpg",
   },
   {
     id: "quartz-powder",
     name: "Quartz Powder",
     purity: "99%+",
-    image: "src/assets/images/quartz-powder.jpeg",
+    image: "https://i.ibb.co/JjBZkrPH/quartz-powder.jpg",
   },
   {
     id: "quartz-grits",
     name: "Quartz Grits",
     purity: "99%+",
-    image: "./assets/images/quartz-grits.jpeg",
+    image: "https://i.ibb.co/vxPXqNc9/quartz-grits.jpg",
   },
   
   {
     id: "dolomite-grits",
     name: "Dolomite Grits",
     purity: "98%+",
-    image: "./assets/images/dolomite-grits.jpeg",
+    image: "https://i.ibb.co/Ym90GcQ/dolomite-grits.jpg",
   },
   {
     id: "coated-calcite",
     name: "Coated Calcite Powder",
     purity: "97%+",
-    image: "src/assets/images/coated-calcite.jpeg",
+    image: "https://i.ibb.co/xTs0rBc/coated-calcite.jpg",
   },
   {
     id: "coated-dolomite",
     name: "Coated Dolomite Powder",
     purity: "97%+",
-    image: "src/assets/images/Coated-dolomite.jpeg",
+    image: "https://i.ibb.co/GfJ4gPQ0/Coated-dolomite.jpg",
   },
   {
     id: "pebble",
     name: "Pebble",
     purity: "97%+",
-    image: "src/assets/images/pebble.png",
+    image: "https://i.ibb.co/vx7nXVZv/pebble.png",
   },
 ];
 
