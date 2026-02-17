@@ -26,14 +26,14 @@ const products = [
     id: "quartz-grits",
     name: "Quartz Grits",
     purity: "99%+",
-    image: "src/assets/images/quartz-grits.jpeg",
+    image: "./assets/images/quartz-grits.jpeg",
   },
   
   {
     id: "dolomite-grits",
     name: "Dolomite Grits",
     purity: "98%+",
-    image: "src/assets/images/dolomite-grits.jpeg",
+    image: "./assets/images/dolomite-grits.jpeg",
   },
   {
     id: "coated-calcite",
