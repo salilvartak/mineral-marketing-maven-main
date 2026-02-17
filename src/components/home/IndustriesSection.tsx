@@ -1,5 +1,4 @@
-import { Description } from "@radix-ui/react-toast";
-import { Palette, Pipette, CircleDot, GlassWater, Tractor, Building2, FileText, Pill, icons } from "lucide-react";
+import { Palette, Pipette, CircleDot, GlassWater, Tractor, Building2, FileText, Pill } from "lucide-react";
 
 const industries = [
   {
@@ -15,7 +14,7 @@ const industries = [
   {
     icon: Palette,
     name: "Slabs(Countertop)",
-    description: ""
+    description: "High durability and aesthetic finish", // Added placeholder text for better UI, feel free to remove
   },
   {
     icon: GlassWater,
@@ -37,7 +36,6 @@ const industries = [
     name: "Paper Industry",
     description: "Coating pigment for brightness & smoothness",
   },
-  
   {
     icon: Tractor,
     name: "Agriculture",
@@ -48,7 +46,6 @@ const industries = [
     name: "Construction",
     description: "Building materials & cement additives",
   },
-  
   {
     icon: Pill,
     name: "Pharmaceuticals",
@@ -62,7 +59,9 @@ export const IndustriesSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-accent font-semibold uppercase tracking-wider text-sm mb-3 block">Industries We Serve</span>
+          <span className="text-accent font-semibold uppercase tracking-wider text-sm mb-3 block">
+            Industries We Serve
+          </span>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">
             Powering Diverse Industries
           </h2>
@@ -72,20 +71,25 @@ export const IndustriesSection = () => {
         </div>
 
         {/* Industries Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {/* The magic class here is: [&>*:nth-child(9)]:lg:col-start-2 */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 [&>*:nth-child(9)]:lg:col-start-2">
           {industries.map((industry, index) => {
             const Icon = industry.icon;
             return (
               <div
                 key={industry.name}
-                className="bg-card p-6 rounded-lg text-center hover-lift group cursor-pointer"
+                className="bg-card p-6 rounded-lg text-center hover-lift group cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4 group-hover:bg-accent transition-colors duration-300">
                   <Icon className="h-8 w-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
                 </div>
-                <h3 className="font-heading font-semibold text-foreground mb-2">{industry.name}</h3>
-                <p className="text-muted-foreground text-sm">{industry.description}</p>
+                <h3 className="font-heading font-semibold text-foreground mb-2">
+                  {industry.name}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {industry.description}
+                </p>
               </div>
             );
           })}

@@ -1,21 +1,36 @@
+import React, { useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Factory, Mountain, FlaskConical, Warehouse, MapPin, Cog } from "lucide-react";
 
+// 1. Updated Data with Images for Mines
 const mineLocations = [
-  { name: "Kotadi, Dariba", minerals: "Quartz, Calcite" },
-  { name: "Amet, Rajsamand", minerals: "Dolomite, Calcite" },
-  { name: "Makrana", minerals: "Marble, Calcite" },
+  { 
+    name: "Ajmer, Nasirabad, Rajasthan", 
+    minerals: "Quartz",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80" 
+  },
+  { 
+    name: "Makrana, Rajasthan", 
+    minerals: "Calcite",
+    image: "https://images.unsplash.com/photo-1629196914375-f7e48f477b6d?w=800&q=80"
+  },
+  
 ];
 
+// 2. Updated Data with Map Queries for Plants
+// Note: We use a generic Google Maps embed query. 
+// For production, you should use the official Google Maps Embed API Key.
 const plants = [
-  { name: "Adv Techno Mine and Minerals", location: "Nasirabad" },
-  { name: "RD Microns LLP", location: "Nasirabad" },
-  { name: "Stonex Enterprises", location: "Nasirabad" },
-  { name: "RRR Microns", location: "Nasirabad" },
-  { name: "RR Global Industries", location: "Nasirabad" },
+  { name: "Adv Techno Mine and Minerals", location: "W5X5+76C Kotrii, Rajasthan", query: "W5X5+76C Kotrii, Rajasthand" },
+  { name: "Natural Minerals Resources", location: "W5X5+76C Kotrii, Rajasthan", query: "W5X5+76C Kotrii, Rajasthan" },
+  { name: "RD Microns LLP", location: "R4V2+4P7 Girdharipura, Rajasthan", query: "R4V2+4P7 Girdharipura, Rajasthan" },
+  { name: "Stonex Enterprises", location: "W5X5+76C Kotrii, Rajasthan", query: "W5X5+76C Kotrii, Rajasthan" },
+  { name: "Stonex Enterprises, Borada", location: "W5X5+76C Kotrii, Rajasthan", query: "W5X5+76C Kotrii, Rajasthan" },
+  { name: "RRR Microns", location: "52JV+Q8J Borada, Rajasthan", query: "52JV+Q8J Borada, Rajasthan" }, // Fallback if specific place not found
+  { name: "M/S Bal Gopal Microns llp", location: "6WJ3+C98 Saprao Ka Gurha, Rajasthan", query: "6WJ3+C98 Saprao Ka Gurha, Rajasthan" },
+  
 ];
 
 const machinery = [
@@ -29,6 +44,10 @@ const machinery = [
 ];
 
 const Infrastructure = () => {
+  // State for interactive sections
+  const [activeMine, setActiveMine] = useState(mineLocations[0]);
+  const [activePlant, setActivePlant] = useState(plants[0]);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -67,7 +86,6 @@ const Infrastructure = () => {
                 <div className="font-heading font-bold text-3xl text-accent mb-2">2</div>
                 <p className="text-muted-foreground">Mine Locations</p>
               </div>
-              
               <div className="bg-card p-6 rounded-lg shadow-md text-center">
                 <div className="font-heading font-bold text-3xl text-accent mb-2">1</div>
                 <p className="text-muted-foreground">Warehouse Locations</p>
@@ -80,7 +98,7 @@ const Infrastructure = () => {
           </div>
         </section>
 
-        {/* Mines Section */}
+        {/* --- INTERACTIVE MINES SECTION --- */}
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-3 mb-8">
@@ -89,78 +107,103 @@ const Infrastructure = () => {
               </div>
               <h2 className="font-heading font-bold text-2xl text-foreground">Our Mines</h2>
             </div>
+
             <div className="grid md:grid-cols-2 gap-8 items-start">
+              {/* Left: List of Mines */}
               <div className="space-y-4">
                 {mineLocations.map((mine) => (
-                  <div key={mine.name} className="bg-card p-5 rounded-lg shadow-sm flex items-start gap-4">
-                    <MapPin className="h-5 w-5 text-accent shrink-0 mt-1" />
+                  <div 
+                    key={mine.name} 
+                    // Added onMouseEnter to change state
+                    onMouseEnter={() => setActiveMine(mine)}
+                    className={`p-5 rounded-lg shadow-sm flex items-start gap-4 cursor-pointer transition-all duration-300 border-2 ${
+                      activeMine.name === mine.name 
+                        ? "bg-white border-accent scale-[1.02]" 
+                        : "bg-card border-transparent hover:bg-white"
+                    }`}
+                  >
+                    <MapPin className={`h-5 w-5 shrink-0 mt-1 transition-colors ${
+                      activeMine.name === mine.name ? "text-accent" : "text-muted-foreground"
+                    }`} />
                     <div>
-                      <h4 className="font-heading font-semibold text-foreground">{mine.name}</h4>
+                      <h4 className={`font-heading font-semibold ${
+                        activeMine.name === mine.name ? "text-accent" : "text-foreground"
+                      }`}>{mine.name}</h4>
                       <p className="text-muted-foreground text-sm">Minerals: {mine.minerals}</p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+
+              {/* Right: Dynamic Image */}
+              <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg bg-gray-200">
                 <img
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
-                  alt="Mining Operations"
-                  className="w-full h-full object-cover"
+                  src={activeMine.image}
+                  alt={activeMine.name}
+                  className="w-full h-full object-cover transition-opacity duration-500"
+                  // Key forces re-render for animation if desired, or let React reconcile src change
+                  key={activeMine.name} 
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Plants & Machinery */}
+        {/* --- INTERACTIVE PLANTS SECTION --- */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Plants */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                    <Factory className="h-6 w-6 text-accent" />
-                  </div>
-                  <h2 className="font-heading font-bold text-2xl text-foreground">Manufacturing Plants</h2>
-                </div>
-                <div className="space-y-3">
-                  {plants.map((plant) => (
-                    <div key={plant.name} className="bg-card p-4 rounded-lg shadow-sm flex items-center justify-between">
-                      <span className="font-medium text-foreground">{plant.name}</span>
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                <Factory className="h-6 w-6 text-accent" />
+              </div>
+              <h2 className="font-heading font-bold text-2xl text-foreground">Manufacturing Plants</h2>
+            </div>
+
+            {/* Layout: Map Left, List Right */}
+            <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+              
+              {/* Left: Dynamic Map Iframe */}
+              <div className="order-2 lg:order-1 h-[400px] rounded-lg overflow-hidden shadow-xl bg-gray-100 border border-border">
+                 <iframe
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src={`https://maps.google.com/maps?q=${encodeURIComponent(activePlant.query)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
+                    title="Plant Location"
+                  ></iframe>
+              </div>
+
+              {/* Right: List of Plants */}
+              <div className="order-1 lg:order-2 space-y-3">
+                {plants.map((plant) => (
+                  <div 
+                    key={plant.name} 
+                    onMouseEnter={() => setActivePlant(plant)}
+                    className={`p-4 rounded-lg shadow-sm flex items-center justify-between cursor-pointer transition-all duration-300 border-l-4 ${
+                       activePlant.name === plant.name 
+                        ? "bg-accent/5 border-accent shadow-md" 
+                        : "bg-card border-transparent hover:bg-accent/5"
+                    }`}
+                  >
+                    <div className="flex flex-col">
+                      <span className={`font-medium ${
+                        activePlant.name === plant.name ? "text-foreground font-bold" : "text-foreground/80"
+                      }`}>{plant.name}</span>
                       <span className="text-muted-foreground text-sm">{plant.location}</span>
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Machinery */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                    <Cog className="h-6 w-6 text-accent" />
+                    {activePlant.name === plant.name && (
+                         <MapPin className="h-4 w-4 text-accent animate-pulse" />
+                    )}
                   </div>
-                  <h2 className="font-heading font-bold text-2xl text-foreground">Machinery</h2>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  {machinery.map((item) => (
-                    <div key={item} className="bg-card p-4 rounded-lg shadow-sm flex items-center gap-3">
-                      <div className="w-2 h-2 bg-accent rounded-full shrink-0" />
-                      <span className="text-foreground text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
+                ))}
               </div>
             </div>
 
-            {/* Plant Image */}
-            <div className="mt-12 aspect-[21/9] rounded-lg overflow-hidden shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=500&fit=crop"
-                alt="Manufacturing Plant"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            
+
           </div>
         </section>
 
@@ -234,60 +277,7 @@ const Infrastructure = () => {
           </div>
         </section>
 
-        {/* Image Gallery 
-        <section className="py-16 bg-muted">
-          <div className="container mx-auto px-4">
-            <h2 className="font-heading font-bold text-2xl text-foreground mb-8 text-center">Facility Gallery</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-                "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-                "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop",
-                "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=300&fit=crop",
-              ].map((img, index) => (
-                <div key={index} className="aspect-[4/3] rounded-lg overflow-hidden shadow-md">
-                  <img
-                    src={img}
-                    alt={`Facility ${index + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>*/}
-
-        {/* Live Google Map 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-2xl mx-auto mb-8">
-              <h2 className="font-heading font-bold text-3xl text-foreground mb-4">Visit Our Locations</h2>
-              <p className="text-muted-foreground">
-                Find us at our strategic locations across Rajasthan
-              </p>
-            </div>
-            <div className="bg-card rounded-lg overflow-hidden shadow-xl">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.9876543210!2d74.7661!3d26.3297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE5JzQ2LjkiTiA3NMKwNDUnNTcuOSJF!5e0!3m2!1sen!2sin!4v1234567890"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Stonex Enterprises Location"
-              />
-            </div>
-            <div className="text-center mt-8">
-              <Button variant="cta" size="lg" asChild>
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
-                  Get Directions
-                </a>
-              </Button>
-            </div>
-          </div>
-        </section>
-        */}
+        
       </main>
       <Footer />
     </div>

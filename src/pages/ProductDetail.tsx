@@ -23,19 +23,21 @@ const productsData: Record<string, {
   how: string;
   physicalProperties: { property: string; value: string }[];
   chemicalProperties: { property: string; value: string }[];
-  particleSizes: string[];
+  MeshSizes?: string[];
+  MicronSizes?: string[];
+  SizeLine?: string[];
   packaging: string[];
   applications: { industry: string; uses: string[] }[];
 }> = {
   "calcite-powder": {
     name: "Calcite Powder",
     purity: "98%+",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+    image: "https://i.ibb.co/pHbVhwp/calcite-powder.png",
     description: "High purity calcium carbonate (CaCO3) for diverse industrial applications",
     rawMaterial: "Natural calcite sourced from Rajasthan mines with strict quality control",
     productionCapacity: "1,500+ MT per month",
-    whatIs: "Calcite Powder is a natural form of calcium carbonate (CaCO3) characterized by its high brightness, whiteness, and purity. It is one of the most versatile industrial minerals used as a filler, extender, and pigment across various industries.",
-    how:"We source top premium grade of Calcite lumps (CaCO3) containing high calcium carbonate from all across Rajasthan  and manufacture High Quality Calcite Powder with purity up to ____% under the best manufacturing process to maintain the highest standards of quality. Total production of Calcite powder _______MT per month. Our Calcite powder availed at the most affordable prices.",
+    whatIs: "Calcite is the one of the most common minerals on earth. Calcite powder is the finely ground mineral form of calcium carbonate (CaCO3). It is an abundant, purity, extremely high whiteness, smooth texture , free-flowing powder and super chemical properties. Due to its Excellent Physico-Mechanical Properties widely used across various industries as a cost-effective filler, coating agent and an additive to enhance product properties.",
+    how:"We source top premium grade of Calcite lumps (CaCO3) containing high calcium carbonate from all across Rajasthan  and manufacture High Quality Calcite Powder with purity >98.5% under the best manufacturing process to maintain the highest standards of quality. Total production of Calcite powder is 5000 MT per month",
     physicalProperties: [
       { property: "Color", value: "White to off-white" },
       { property: "Specific Gravity", value: "2.7 g/cm³" },
@@ -52,7 +54,9 @@ const productsData: Record<string, {
       { property: "Al2O3", value: "<0.2%" },
       { property: "Loss on Ignition", value: "42-44%" },
     ],
-    particleSizes: ["2 Micron", "5 Micron", "10 Micron", "20 Micron", "40 Micron", "100 Mesh", "200 Mesh", "300 Mesh", "500 Mesh"],
+    MeshSizes: ["200", "300", "500", "1000"],
+    MicronSizes: ["2 Micron to 74 Micron"],
+    SizeLine: ["Our Calcite powder available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
     applications: [
       { industry: "Paints & Coatings", uses: ["Improves opacity and brightness", "Acts as extender pigment", "Enhances durability"] },
@@ -87,7 +91,9 @@ const productsData: Record<string, {
       { property: "Al2O3", value: "<0.3%" },
       { property: "Loss on Ignition", value: "45-47%" },
     ],
-    particleSizes: ["10 Micron", "20 Micron", "40 Micron", "100 Mesh", "200 Mesh", "300 Mesh"],
+    MeshSizes: ["200", "300", "500", "1000"],
+    MicronSizes: ["2 Micron to 74 Micron"],
+    SizeLine: ["Our Dolomite powder available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
     applications: [
       { industry: "Glass & Ceramics", uses: ["Flux material", "Thermal stability", "Durability enhancement"] },
@@ -121,7 +127,9 @@ const productsData: Record<string, {
       { property: "MgO", value: "<0.05%" },
       { property: "Loss on Ignition", value: "<0.5%" },
     ],
-    particleSizes: ["5 Micron", "10 Micron", "20 Micron", "40 Micron", "100 Mesh", "200 Mesh", "300 Mesh", "500 Mesh"],
+    MeshSizes: ["200", "300", "500", "1000"],
+    MicronSizes: ["2 Micron to 74 Micron"],
+    SizeLine: ["Our Quartz Powder available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
     applications: [
       { industry: "Slab Manufacturing", uses: ["Quartz slabs", "Engineered stone", "Countertops"] },
@@ -154,7 +162,9 @@ const productsData: Record<string, {
       { property: "CaO", value: "<0.1%" },
       { property: "Acid Solubility", value: "<2%" },
     ],
-    particleSizes: ["8-16 Mesh", "16-30 Mesh", "30-60 Mesh", "60-100 Mesh", "100-200 Mesh"],
+    MeshSizes: ["200", "300", "500", "1000"],
+    MicronSizes: ["2 Micron to 74 Micron"],
+      SizeLine: ["Our Quartz Grits available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
     applications: [
       { industry: "Water Filtration", uses: ["Swimming pools", "Water treatment plants", "Industrial filtration"] },
@@ -188,7 +198,9 @@ const productsData: Record<string, {
       { property: "Al2O3", value: "<1%" },
       { property: "Loss on Ignition", value: "4-6%" },
     ],
-    particleSizes: ["2 Micron", "5 Micron", "10 Micron", "20 Micron", "200 Mesh", "300 Mesh", "500 Mesh"],
+    MeshSizes: ["200", "300", "500", "1000"],
+    MicronSizes: ["2 Micron to 74 Micron"],
+      SizeLine: ["Our Talc powder available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
     applications: [
       { industry: "Pharmaceuticals", uses: ["Tablet filler", "Anti-caking agent", "Lubricant"] },
@@ -222,7 +234,9 @@ const productsData: Record<string, {
       { property: "SiO2", value: "<0.5%" },
       { property: "Fe2O3", value: "<0.05%" },
     ],
-    particleSizes: ["2 Micron", "5 Micron", "10 Micron", "20 Micron"],
+    MeshSizes: ["200", "300", "500", "1000"],
+    MicronSizes: ["2 Micron to 74 Micron"],
+      SizeLine: ["Our Coated Calcite powder available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
     applications: [
       { industry: "PVC Industry", uses: ["Pipes & fittings", "Profiles", "Films & sheets"] },
@@ -255,7 +269,9 @@ const productsData: Record<string, {
       { property: "SiO2", value: "<1.0%" },
       { property: "Fe2O3", value: "<0.1%" },
     ],
-    particleSizes: ["10 Micron", "20 Micron", "40 Micron"],
+    MeshSizes: ["200", "300", "500", "1000"],
+    MicronSizes: ["2 Micron to 74 Micron"],
+      SizeLine: ["Our Coated Dolomite powder available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
     applications: [
       { industry: "Plastics", uses: ["PP compounds", "PE compounds", "Filler applications"] },
@@ -413,103 +429,36 @@ const ProductDetail = () => {
           </section>
         )}
 
+        <section className="py-12 ">
+          <div className="container mx-auto px-4 bg-accent/10 p-6 rounded-lg shadow-md">
+            <p className="text-muted-foreground text-lg leading-relaxed">{product.how}</p>
+          </div>
+        </section>
+
         {/* What Is Section */}
         <section className="py-12 bg-background">
           <div className="container mx-auto px-4">
             <h2 className="font-heading font-bold text-2xl text-foreground mb-4">What is {product.name}?</h2>
             <p className="text-muted-foreground text-lg leading-relaxed">{product.whatIs}</p>
           </div>
-          
         </section>
-
-        <section className="py-12 bg-background">
-          <div className="container mx-auto px-4">
-            <h2 className="font-heading font-bold text-2xl text-foreground mb-4">How We Make {product.name}?</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">{product.how}</p>
-          </div>
-        </section>
-
-        {/* Desktop: Tables Side by Side | Mobile: Collapsible 
-        <section className="py-12 bg-muted">
-          <div className="container mx-auto px-4">
-            {/* Desktop View 
-            <div className="hidden md:grid md:grid-cols-2 gap-8">
-              {/* Physical Properties 
-              <div>
-                <h3 className="font-heading font-bold text-xl text-foreground mb-4">Physical Properties</h3>
-                <div className="overflow-x-auto">
-                  <table className="w-full bg-card rounded-lg shadow-md">
-                    <tbody>
-                      {product.physicalProperties.map((prop, index) => (
-                        <tr key={prop.property} className={index < product.physicalProperties.length - 1 ? "border-b border-border/50" : ""}>
-                          <td className="p-4 font-medium text-foreground">{prop.property}</td>
-                          <td className="p-4 text-muted-foreground">{prop.value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              
-              {/* Chemical Properties 
-              <div>
-                <h3 className="font-heading font-bold text-xl text-foreground mb-4">Chemical Properties</h3>
-                <div className="overflow-x-auto">
-                  <table className="w-full bg-card rounded-lg shadow-md">
-                    <tbody>
-                      {product.chemicalProperties.map((prop, index) => (
-                        <tr key={prop.property} className={index < product.chemicalProperties.length - 1 ? "border-b border-border/50" : ""}>
-                          <td className="p-4 font-medium text-foreground">{prop.property}</td>
-                          <td className="p-4 text-muted-foreground">{prop.value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile View - Collapsible 
-            <div className="md:hidden space-y-4">
-              <CollapsibleSection title="Physical Properties" icon={Beaker}>
-                <div className="overflow-x-auto -mx-4 px-4">
-                  <table className="w-full min-w-[300px]">
-                    <tbody>
-                      {product.physicalProperties.map((prop, index) => (
-                        <tr key={prop.property} className={index < product.physicalProperties.length - 1 ? "border-b border-border/50" : ""}>
-                          <td className="py-3 pr-4 font-medium text-foreground whitespace-nowrap">{prop.property}</td>
-                          <td className="py-3 text-muted-foreground">{prop.value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </CollapsibleSection>
-
-              <CollapsibleSection title="Chemical Properties" icon={Beaker}>
-                <div className="overflow-x-auto -mx-4 px-4">
-                  <table className="w-full min-w-[300px]">
-                    <tbody>
-                      {product.chemicalProperties.map((prop, index) => (
-                        <tr key={prop.property} className={index < product.chemicalProperties.length - 1 ? "border-b border-border/50" : ""}>
-                          <td className="py-3 pr-4 font-medium text-foreground whitespace-nowrap">{prop.property}</td>
-                          <td className="py-3 text-muted-foreground">{prop.value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </CollapsibleSection>
-            </div>
-          </div>
-        </section>*/}
 
         {/* Particle Sizes */}
         <section className="py-12 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="font-heading font-bold text-2xl text-foreground mb-6">Available Particle Sizes</h2>
+            <h2 className="font-heading font-bold text-2xl text-foreground ">Available Particle Sizes</h2>
+            <p className="text-muted-foreground mb-4">{product.SizeLine}</p>
+            <h3 className="font-heading font-semibold text-lg text-foreground mb-3">Micron Sizes</h3>
+            <div className="flex flex-wrap gap-3 mb-6">
+              {product.MicronSizes?.map((size) => (
+                <span key={size} className="bg-accent/10 text-accent px-4 py-2 rounded-full font-medium">
+                  {size}
+                </span>
+              ))}
+            </div>
+            <h3 className="font-heading font-semibold text-lg text-foreground mb-3">Mesh Sizes</h3>
             <div className="flex flex-wrap gap-3">
-              {product.particleSizes.map((size) => (
+              {product.MeshSizes?.map((size) => (
                 <span key={size} className="bg-accent/10 text-accent px-4 py-2 rounded-full font-medium">
                   {size}
                 </span>
@@ -548,48 +497,22 @@ const ProductDetail = () => {
           </div>
         </section>
 
-        {/* Applications by Industry */}
-        <section className="py-12 bg-background">
-          <div className="container mx-auto px-4">
-            <h2 className="font-heading font-bold text-2xl text-foreground mb-8">Industry Applications</h2>
+        {/* Industry Applications Button Section */}
+        <section className="py-16 bg-background border-t border-border">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-heading font-bold text-2xl text-foreground mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
+              Discover the diverse range of industries and specialized use cases where our {product.name} excels.
+            </p>
             
-            {/* Desktop View */}
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {product.applications.map((app) => (
-                <div key={app.industry} className="bg-card p-6 rounded-lg shadow-md">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                      <Factory className="h-5 w-5 text-accent" />
-                    </div>
-                    <h3 className="font-heading font-semibold text-foreground">{app.industry}</h3>
-                  </div>
-                  <ul className="space-y-2">
-                    {app.uses.map((use) => (
-                      <li key={use} className="flex items-start gap-2 text-muted-foreground text-sm">
-                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0" />
-                        {use}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-
-            {/* Mobile View - Collapsible */}
-            <div className="md:hidden space-y-3">
-              {product.applications.map((app) => (
-                <CollapsibleSection key={app.industry} title={app.industry} icon={Factory}>
-                  <ul className="space-y-2">
-                    {app.uses.map((use) => (
-                      <li key={use} className="flex items-start gap-2 text-muted-foreground">
-                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0" />
-                        {use}
-                      </li>
-                    ))}
-                  </ul>
-                </CollapsibleSection>
-              ))}
-            </div>
+            <Button size="lg" className="group" asChild>
+              <Link to={`/products/${productId}/applications`}>
+                View Applications
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </div>
         </section>
 

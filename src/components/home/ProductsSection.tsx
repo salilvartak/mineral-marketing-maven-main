@@ -7,43 +7,43 @@ const products = [
     id: "calcite-powder",
     name: "Calcite Powder",
     purity: "98%+",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    image: "src/assets/images/calcite-powder.png",
   },
   {
     id: "dolomite-powder",
     name: "Dolomite Powder",
     purity: "97%+",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+    image: "src/assets/images/dolomite-powder.jpeg",
   },
   {
     id: "quartz-powder",
     name: "Quartz Powder",
     purity: "99%+",
-    image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&h=300&fit=crop",
+    image: "src/assets/images/quartz-powder.jpeg",
   },
   {
     id: "quartz-grits",
     name: "Quartz Grits",
     purity: "99%+",
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
+    image: "src/assets/images/quartz-grits.jpeg",
   },
   {
     id: "dolomite-grits",
     name: "Dolomite Grits",
     purity: "98%+",
-    image: "https://images.unsplash.com/photo-1533907650686-70576141c030?w=400&h=300&fit=crop",
+    image: "src/assets/images/dolomite-grits.jpeg",
   },
   {
     id: "coated-calcite",
     name: "Coated Calcite Powder",
     purity: "98%+",
-    image: "https://images.unsplash.com/photo-1533907650686-70576141c030?w=400&h=300&fit=crop",
+    image: "src/assets/images/coated-calcite.jpeg",
   },
   {
     id: "coated-dolomite",
     name: "Coated Dolomite Powder",
     purity: "98%+",
-    image: "https://images.unsplash.com/photo-1533907650686-70576141c030?w=400&h=300&fit=crop",
+    image: "src/assets/images/Coated-dolomite.jpeg",
   },
 
   
@@ -52,7 +52,7 @@ const products = [
     id: "pebbles",
     name: "Pebbles",
     purity: "98%+",
-    image: "https://images.unsplash.com/photo-1533907650686-70576141c030?w=400&h=300&fit=crop",
+    image: "src/assets/images/pebble.png",
   },
 ];
 
@@ -99,9 +99,7 @@ export const ProductsSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-70 md:opacity-60 md:group-hover:opacity-80 transition-opacity" />
                 
                 {/* Purity Badge */}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary text-[10px] font-black px-2 py-1 rounded uppercase tracking-tighter shadow-sm">
-                  {product.purity} Purity
-                </div>
+                
 
                 {/* Content Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white md:translate-y-2 md:group-hover:translate-y-0 transition-transform">

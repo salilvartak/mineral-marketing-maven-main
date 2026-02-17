@@ -1,20 +1,29 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/about" },
-  { name: "Products", path: "/products" },
-  { name: "Infrastructure", path: "/infrastructure" },
-  { name: "Contact Us", path: "/contact" },
+// Product list for the dropdown
+const productLinks = [
+  { name: "Calcite Powder", slug: "calcite-powder" },
+  { name: "Dolomite Powder", slug: "dolomite-powder" },
+  { name: "Quartz Powder", slug: "quartz-powder" },
+  { name: "Quartz Grits", slug: "quartz-grits" },
+  { name: "Talc Powder", slug: "talc-powder" },
+  { name: "Coated Calcite", slug: "coated-calcite" },
+  { name: "Coated Dolomite", slug: "coated-dolomite" },
 ];
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileAppOpen, setIsMobileAppOpen] = useState(false); // State for mobile accordion
   const location = useLocation();
+
+  // Helper to check if a link is active
+  const isActive = (path: string) => location.pathname === path;
+  // Helper to check if any application page is active
+  const isAppActive = location.pathname.includes("/applications");
 
   return (
     <header className="fixed w-full z-50">
@@ -46,22 +55,53 @@ export const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
+              <Link to="/" className={cn("font-medium transition-colors relative py-2", isActive("/") ? "text-accent" : "text-white hover:text-accent")}>
+                Home
+              </Link>
+              
+              <Link to="/about" className={cn("font-medium transition-colors relative py-2", isActive("/about") ? "text-accent" : "text-white hover:text-accent")}>
+                About Us
+              </Link>
+
+              <Link to="/products" className={cn("font-medium transition-colors relative py-2", isActive("/products") ? "text-accent" : "text-white hover:text-accent")}>
+                Products
+              </Link>
+
+              {/* APPLICATIONS DROPDOWN */}
+              <div className="relative group h-full flex items-center">
+                <button 
                   className={cn(
-                    "font-medium transition-colors relative py-2",
-                    location.pathname === link.path
-                      ? "text-accent"
-                      : "text-white hover:text-accent",
-                    "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300",
-                    location.pathname === link.path ? "after:w-full" : "after:w-0 hover:after:w-full"
+                    "flex items-center gap-1 font-medium transition-colors py-2 focus:outline-none",
+                    isAppActive ? "text-accent" : "text-white hover:text-accent"
                   )}
                 >
-                  {link.name}
-                </Link>
-              ))}
+                  Applications
+                  <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                </button>
+                
+                {/* Dropdown Content */}
+                <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[240px]">
+                  <div className="bg-white rounded-lg shadow-xl border border-border/10 overflow-hidden py-2">
+                    {productLinks.map((product) => (
+                      <Link
+                        key={product.slug}
+                        to={`/products/${product.slug}/applications`}
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-accent/10 hover:text-accent transition-colors"
+                      >
+                        {product.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <Link to="/infrastructure" className={cn("font-medium transition-colors relative py-2", isActive("/infrastructure") ? "text-accent" : "text-white hover:text-accent")}>
+                Infrastructure
+              </Link>
+
+              <Link to="/contact" className={cn("font-medium transition-colors relative py-2", isActive("/contact") ? "text-accent" : "text-white hover:text-accent")}>
+                Contact Us
+              </Link>
             </div>
 
             {/* CTA Button */}
@@ -84,26 +124,56 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-border animate-fade-in">
-            <div className="container mx-auto px-4 py-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={cn(
-                    "block py-3 font-medium border-b border-border/50 last:border-0",
-                    location.pathname === link.path
-                      ? "text-accent"
-                      : "text-foreground"
-                  )}
+          <div className="lg:hidden bg-white border-t border-border animate-fade-in max-h-[80vh] overflow-y-auto">
+            <div className="container mx-auto px-4 py-4 space-y-1">
+              <Link to="/" onClick={() => setIsMenuOpen(false)} className={cn("block py-3 font-medium border-b border-border/50", isActive("/") ? "text-accent" : "text-foreground")}>
+                Home
+              </Link>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)} className={cn("block py-3 font-medium border-b border-border/50", isActive("/about") ? "text-accent" : "text-foreground")}>
+                About Us
+              </Link>
+              <Link to="/products" onClick={() => setIsMenuOpen(false)} className={cn("block py-3 font-medium border-b border-border/50", isActive("/products") ? "text-accent" : "text-foreground")}>
+                Products
+              </Link>
+
+              {/* Mobile Applications Accordion */}
+              <div className="border-b border-border/50">
+                <button 
+                  onClick={() => setIsMobileAppOpen(!isMobileAppOpen)}
+                  className={cn("flex w-full items-center justify-between py-3 font-medium", isAppActive ? "text-accent" : "text-foreground")}
                 >
-                  {link.name}
-                </Link>
-              ))}
-              <Button variant="cta" className="w-full mt-4" asChild>
-                <Link to="/contact">Get Quote</Link>
-              </Button>
+                  Applications
+                  <ChevronDown className={cn("h-5 w-5 transition-transform", isMobileAppOpen ? "rotate-180" : "")} />
+                </button>
+                
+                {isMobileAppOpen && (
+                  <div className="bg-muted/30 rounded-lg mb-3 overflow-hidden">
+                    {productLinks.map((product) => (
+                      <Link
+                        key={product.slug}
+                        to={`/products/${product.slug}/applications`}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block px-4 py-3 text-sm text-muted-foreground hover:text-accent border-l-2 border-transparent hover:border-accent hover:bg-accent/5 transition-all"
+                      >
+                        {product.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link to="/infrastructure" onClick={() => setIsMenuOpen(false)} className={cn("block py-3 font-medium border-b border-border/50", isActive("/infrastructure") ? "text-accent" : "text-foreground")}>
+                Infrastructure
+              </Link>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)} className={cn("block py-3 font-medium border-b border-border/50", isActive("/contact") ? "text-accent" : "text-foreground")}>
+                Contact Us
+              </Link>
+
+              <div className="pt-4">
+                <Button variant="cta" className="w-full" asChild>
+                  <Link to="/contact">Get Quote</Link>
+                </Button>
+              </div>
             </div>
           </div>
         )}

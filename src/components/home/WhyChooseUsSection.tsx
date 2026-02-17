@@ -1,4 +1,4 @@
-import { Check, Cog, Shield, Clock, Award, Truck } from "lucide-react";
+import { Check, Cog, Shield, Clock, Award, Truck, Pickaxe, HeartHandshake,BicepsFlexed } from "lucide-react";
 
 const features = [
   {
@@ -32,17 +32,17 @@ const features = [
     description: "Trusted expertise in mineral grinding and quality standards",
   },
   {
-    icon: Check,
+    icon: HeartHandshake,
     title: "Loyalty",
     description: "Trusted expertise in mineral grinding and quality standards",
   },
   {
-    icon: Check,
+    icon: BicepsFlexed,
     title: "Professional Workers",
     description: "Trusted expertise in mineral grinding and quality standards",
   },
   {
-    icon: Check,
+    icon: Pickaxe,
     title: "Own Mines and Manufacturing",
     description: "Trusted expertise in mineral grinding and quality standards",
   },

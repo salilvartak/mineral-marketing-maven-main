@@ -3,6 +3,35 @@ import { Footer } from "@/components/layout/Footer";
 import { Check, Award, Users, Factory, Cog, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Lightbulb, Leaf, Shield } from "lucide-react";
+
+const coreValues = [
+  {
+    title: "Quality Excellence",
+    icon: Award,
+    description: "Uncompromising standards in every product we deliver.",
+  },
+  {
+    title: "Customer Focus",
+    icon: Users,
+    description: "Building lasting partnerships through dedicated service.",
+  },
+  {
+    title: "Innovation",
+    icon: Lightbulb,
+    description: "Embracing new technologies to stay ahead of the curve.",
+  },
+  {
+    title: "Sustainability",
+    icon: Leaf,
+    description: "Responsible practices for a greener, better tomorrow.",
+  },
+  {
+    title: "Integrity",
+    icon: Shield,
+    description: "Transparent and honest dealings in all business aspects.",
+  },
+];
 
 const machinery = [
   { category: "Grinding Mills", items: ["Ball Mills","Micronizer","28 Roller with Classifier"] },
@@ -49,34 +78,64 @@ const About = () => {
 
         {/* Founder Section */}
         <section className="py-20 bg-muted">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative">
-                <div className="w-64 h-64 md:w-80 md:h-80 bg-card rounded-full overflow-hidden shadow-xl mx-auto">
-                  <div className="w-full h-full bg-accent/10 flex items-center justify-center">
-                    <img src="https://i.ibb.co/1JXrYjVZ/Founder.jpg"></img>
-                  </div>
-                </div>
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-6 py-3 rounded-lg shadow-xl">
-                  <div className="text-sm font-semibold text-center">15+ Years Experience</div>
-                </div>
-              </div>
-              <div>
-                <span className="text-accent font-semibold uppercase tracking-wider text-sm mb-3 block">Our Founder</span>
-                <h2 className="font-heading font-bold text-3xl text-foreground mb-4">
-                  Mr. Rajesh Doot
-                </h2>
-                <p className="text-lg text-muted-foreground mb-4">
-                  Founder & Managing Director
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Our Company was established by RAJESH DOOT in 2011, over 15 years of experience in various industrial minerals as well as expertise in mineral grinding, mining and maintaining high quality standard of product. We operate multiple factories across Rajasthan. For achieving High Quality Standard we operate advance production unit equipped with Ball Mills, Micronizer, 28 Roller with Classifier Machine, Automatic Grits Colour Shorter Machine, Gitti Shorting Machine,
-Magnetic Shorting Machine, Powder Coating Machine, and Pebbles Machine. Our success can be largely credited to our skilled, disciplined & motivated employees, who continuously & collectively strive to deliver the best. Today we have a production capacity of more than 180000 MT per Annum.
-                </p>
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Image */}
+          <div className="relative">
+            {/*
+                UPDATED CONTAINER:
+                1. Changed dimensions to be taller (h-96 on mobile, h-[500px] on desktop).
+                2. Changed rounded-full to rounded-xl for a rectangular look with soft corners.
+            */}
+            <div className="w-64 h-96 md:w-80 md:h-[500px] bg-card rounded-xl overflow-hidden shadow-xl mx-auto">
+              {/*
+                  UPDATED IMAGE:
+                  Added w-full h-full object-cover to ensure the image fills
+                  the tall rectangle perfectly without distorting.
+              */}
+              <img
+                src="https://i.ibb.co/1JXrYjVZ/Founder.jpg"
+                alt="Mr. Rajesh Doot"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Experience Badge */}
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-6 py-3 rounded-lg shadow-xl whitespace-nowrap">
+              <div className="text-sm font-semibold text-center">
+                15+ Years Experience
               </div>
             </div>
           </div>
-        </section>
+
+          {/* Right Column - Content */}
+          <div>
+            <span className="text-accent font-semibold uppercase tracking-wider text-sm mb-3 block">
+              Our Founder
+            </span>
+            <h2 className="font-heading font-bold text-3xl text-foreground mb-4">
+              Mr. Rajesh Doot
+            </h2>
+            <p className="text-lg text-muted-foreground mb-4">
+              Founder & Managing Director
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Our Company was established by RAJESH DOOT in 2011, over 15 years
+              of experience in various industrial minerals as well as expertise
+              in mineral grinding, mining and maintaining high quality standard
+              of product. We operate multiple factories across Rajasthan. For
+              achieving High Quality Standard we operate advance production unit
+              equipped with Ball Mills, Micronizer, 28 Roller with Classifier
+              Machine, Automatic Grits Colour Shorter Machine, Gitti Shorting
+              Machine, Magnetic Shorting Machine, Powder Coating Machine, and
+              Pebbles Machine. Our success can be largely credited to our
+              skilled, disciplined & motivated employees, who continuously &
+              collectively strive to deliver the best. Today we have a
+              production capacity of more than 180000 MT per Annum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
         {/* Manufacturing Philosophy */}
         <section className="py-20 bg-background">
@@ -196,24 +255,57 @@ Magnetic Shorting Machine, Powder Coating Machine, and Pebbles Machine. Our succ
         </section>
 
         {/* Core Values */}
-        <section className="py-20 bg-muted">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <h2 className="font-heading font-bold text-3xl text-foreground mb-4">Our Core Values</h2>
-              <p className="text-muted-foreground">The principles that guide everything we do</p>
-            </div>
-            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-              {["Quality Excellence", "Customer Focus", "Innovation", "Sustainability", "Integrity"].map((value) => (
-                <div key={value} className="bg-card p-6 rounded-lg text-center shadow-md hover-lift">
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Check className="h-6 w-6 text-accent" />
-                  </div>
-                  <h4 className="font-heading font-semibold text-foreground">{value}</h4>
+        <section className="py-24 bg-muted/50">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-accent font-semibold uppercase tracking-wider text-sm mb-3 block">
+            Our DNA
+          </span>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">
+            Our Core Values
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            The guiding principles that define who we are and how we serve you.
+          </p>
+        </div>
+
+        {/* GRID LOGIC:
+           1. md:grid-cols-2 -> Tablet: Standard 2 column grid.
+           2. lg:grid-cols-6 -> Desktop: We use 6 columns total.
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          {coreValues.map((value, index) => {
+            const Icon = value.icon;
+            
+            // Logic to center the last row (items 4 & 5)
+            // On desktop (lg), if it is the 4th item (index 3), push it to start at col 2.
+            const centerClass = index === 3 ? "lg:col-start-2" : "";
+
+            return (
+              <div
+                key={value.title}
+                className={`
+                  bg-card p-8 rounded-2xl border border-border/50 
+                  transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 group
+                  lg:col-span-2 ${centerClass}
+                `}
+              >
+                <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                  <Icon className="h-7 w-7 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+                <h4 className="font-heading font-bold text-xl text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
+                  {value.title}
+                </h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
 
         {/* CTA */}
         <section className="py-16 bg-primary">

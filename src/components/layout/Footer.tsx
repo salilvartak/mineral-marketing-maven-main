@@ -10,8 +10,8 @@ export const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-primary-foreground rounded-lg flex items-center justify-center">
-                <span className="text-primary font-heading font-bold text-xl">S</span>
+              <div className="w-20  flex items-center justify-center">
+                <img src="https://i.ibb.co/PvKQSV65/STONEX-NEW-BLUE-1.png" alt="" />
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-bold text-xl">Stonex</span>
@@ -87,11 +87,26 @@ export const Footer = () => {
                 </span>
               </li>
               <li>
-                <a href="tel:+919876543210" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
+                <a href="tel:+919928157991" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
                   <Phone className="h-5 w-5 text-accent" />
                   <span>+91 9928157991</span>
+                  
+                </a>
+                <a href="tel:+919929702991" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
+                  <Phone className="h-5 w-5 text-accent" />
+                  
                   <span>+91 9929702991</span>
+                  
+                </a>
+                <a href="tel:+918112290501" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
+                  <Phone className="h-5 w-5 text-accent" />
+                  
                   <span>+91 8112290501</span>
+                  
+                </a>
+                <a href="tel:+919414503816" className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors">
+                  <Phone className="h-5 w-5 text-accent" />
+                  
                   <span>+91 9414503816</span>
                 </a>
               </li>

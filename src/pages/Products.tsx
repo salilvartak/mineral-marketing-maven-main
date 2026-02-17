@@ -8,38 +8,50 @@ const products = [
     id: "calcite-powder",
     name: "Calcite Powder",
     purity: "98%+",
-    image: "https://images.unsplash.com/photo-558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    image: "src/assets/images/calcite-powder.png",
   },
   {
     id: "dolomite-powder",
     name: "Dolomite Powder",
     purity: "97%+",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+    image: "src/assets/images/dolomite-powder.jpeg",
   },
   {
     id: "quartz-powder",
     name: "Quartz Powder",
     purity: "99%+",
-    image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop",
+    image: "src/assets/images/quartz-powder.jpeg",
   },
   {
     id: "quartz-grits",
     name: "Quartz Grits",
     purity: "99%+",
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop",
+    image: "src/assets/images/quartz-grits.jpeg",
   },
   
   {
-    id: "coated-calcite",
-    name: "Coated Calcite",
+    id: "dolomite-grits",
+    name: "Dolomite Grits",
     purity: "98%+",
-    image: "https://images.unsplash.com/photo-1533907650686-70576141c030?w=600&h=400&fit=crop",
+    image: "src/assets/images/dolomite-grits.jpeg",
+  },
+  {
+    id: "coated-calcite",
+    name: "Coated Calcite Powder",
+    purity: "97%+",
+    image: "src/assets/images/coated-calcite.jpeg",
   },
   {
     id: "coated-dolomite",
-    name: "Coated Dolomite",
+    name: "Coated Dolomite Powder",
     purity: "97%+",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop",
+    image: "src/assets/images/Coated-dolomite.jpeg",
+  },
+  {
+    id: "pebble",
+    name: "Pebble",
+    purity: "97%+",
+    image: "src/assets/images/pebble.png",
   },
 ];
 
@@ -85,9 +97,7 @@ const Products = () => {
                         <ArrowRight className="h-4 w-4" />
                       </span>
                     </div>
-                    <div className="absolute top-3 right-3 bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded-full">
-                      {product.purity}
-                    </div>
+                    
                   </div>
                   
                   {/* Product Name */}
