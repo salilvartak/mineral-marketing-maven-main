@@ -14,6 +14,7 @@ import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Infrastructure from "./pages/Infrastructure";
 import Contact from "./pages/Contact";
+import ProductApplications from "./pages/ProductApplications";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/products", element: <Products /> },
       { path: "/products/:productId", element: <ProductDetail /> },
+      { path: "/products/:productId/applications", element: <ProductApplications /> }, // New Route for Applications
       { path: "/infrastructure", element: <Infrastructure /> },
       { path: "/contact", element: <Contact /> },
       { path: "*", element: <NotFound /> },

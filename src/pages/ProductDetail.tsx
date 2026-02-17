@@ -31,7 +31,7 @@ const productsData: Record<string, {
 }> = {
   "calcite-powder": {
     name: "Calcite Powder",
-    purity: "98%+",
+    purity: "98.5%+",
     image: "https://i.ibb.co/pHbVhwp/calcite-powder.png",
     description: "High purity calcium carbonate (CaCO3) for diverse industrial applications",
     rawMaterial: "Natural calcite sourced from Rajasthan mines with strict quality control",
@@ -68,13 +68,13 @@ const productsData: Record<string, {
   },
   "dolomite-powder": {
     name: "Dolomite Powder",
-    purity: "97%+",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+    purity: "98%+",
+    image: "https://i.ibb.co/XfxJ9GLw/dolomite-powder.jpg",
     description: "Premium CaMg(CO3)2 with high calcium and magnesium content",
     rawMaterial: "High-grade dolomite from Rajasthan mineral deposits",
     productionCapacity: "1,200+ MT per month",
-    whatIs: "Dolomite Powder is a double carbonate of calcium and magnesium CaMg(CO3)2. It offers excellent thermal stability, high compression strength, and weather resistance, making it ideal for construction, glass, ceramics, and agricultural applications.",
-    how:"",
+    whatIs: "Dolomite is one of the carbonate minerals composed of Calcium and Magnesium Carbonate CaMg(CO3)2 with a crystalline structure. Dolomite commonly forms through dolomitization in sedimentary environments, where magnesium replaces some calcium in existing rock. Dolomite powder is the finely ground mineral form of Dolomite. Dolomite has high purity level, good compression strength, unique wettability level, super chemical and thermal properties, strength-enhancing properties and cost-effectiveness. Due to unique properties Dolomite powder used across various industries as a cost-effective filler, coating agent and an additive to enhance product properties.",
+    how:"We source top premium grade of Dolomite lumps CaMg(CO3)2 containing high Calcium and Magnesium carbonate from all across Rajasthan and manufacture High Quality Dolomite Powder with purity >98% under the best manufacturing process to maintain the highest standards of quality. Total production of Dolomite powder & Dolomite Gritz is 6000 MT per month",
     physicalProperties: [
       { property: "Color", value: "White to light grey" },
       { property: "Specific Gravity", value: "2.85 g/cm³" },
@@ -91,7 +91,7 @@ const productsData: Record<string, {
       { property: "Al2O3", value: "<0.3%" },
       { property: "Loss on Ignition", value: "45-47%" },
     ],
-    MeshSizes: ["200", "300", "500", "1000"],
+    MeshSizes: ["200", "300", "500"],
     MicronSizes: ["2 Micron to 74 Micron"],
     SizeLine: ["Our Dolomite powder available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
@@ -105,12 +105,12 @@ const productsData: Record<string, {
   "quartz-powder": {
     name: "Quartz Powder",
     purity: "99%+",
-    image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop",
+    image: "https://i.ibb.co/JjBZkrPH/quartz-powder.jpg",
     description: "Ultra-fine silica (SiO2) for construction and industrial use",
     rawMaterial: "Premium quality quartz crystals from Rajasthan",
     productionCapacity: "800+ MT per month",
-    whatIs: "Quartz Powder is ultra-fine silicon dioxide (SiO2) known for its high purity, excellent hardness, and chemical resistance. It is essential for slab manufacturing, glass production, construction, and various industrial applications requiring high silica content.",
-    how:"",
+    whatIs: "Quartz is the one of the hard and durable minerals on earth. Quartz chemical name is Silicon Dioxide (SiO2). Quartz powder is the finely ground mineral form of Quartz. Quartz is one of the main elements that make up many types of rocks, namely igneous, sedimentary and metamorphic ones. Quartz crystals have the unique property of piezoelectricity, meaning they generate an electric charge or potential difference when subjected to mechanical stress or pressure. Quartz has high hardness of 7 (Mohs scale), Super Chemical and Thermal stability. In its purest state, quartz crystallizes into a colourless, clear, extremely hard, and glass-like structure. Quartz occurs in virtually every colour. Colored varieties of quartz are common and include citrine, rose quartz, amethyst, smoky quartz, milky quartz. Due to unique properties Quartz powder used across various industries.",
+    how:"We source top premium grade of Quartz lumps (SiO2) contain high amount of Silica from all across Rajasthan and manufacture High Quality Quartz Powder with purity of > 99% under the best manufacturing process to maintain the highest standards of quality. Total production of Quartz powder and Quartz Gritz 6000 MT per month. ",
     physicalProperties: [
       { property: "Color", value: "White" },
       { property: "Specific Gravity", value: "2.65 g/cm³" },
@@ -128,7 +128,7 @@ const productsData: Record<string, {
       { property: "Loss on Ignition", value: "<0.5%" },
     ],
     MeshSizes: ["200", "300", "500", "1000"],
-    MicronSizes: ["2 Micron to 74 Micron"],
+    MicronSizes: ["10 Micron to 74 Micron"],
     SizeLine: ["Our Quartz Powder available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
     applications: [
@@ -141,12 +141,12 @@ const productsData: Record<string, {
   "quartz-grits": {
     name: "Quartz Grits",
     purity: "99%+",
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
+    image: "https://i.ibb.co/vxPXqNc9/quartz-grits.jpg",
     description: "Graded silica grits for filtration and surface finishing",
     rawMaterial: "Selected quartz lumps processed for uniform sizing",
     productionCapacity: "600+ MT per month",
-    whatIs: "Quartz Grits are uniformly graded particles of silicon dioxide available in various mesh sizes. Known for their high silica content, durability, and uniform grading, they are essential for water filtration, surface finishing, and abrasive applications.",
-    how:"",
+    whatIs: "Quartz Grits are made by crushing High Quality Quartz stone. Through crushing them into smaller pieces using crushers and mills, and then processing to achieve desired sizes and purity, often involving washing, magnetic separation and automatic gritz colour shorting treatments to remove impurities, resulting in fine grains which use in various industries.",
+    how:"We source top premium grade of Quartz lumps (SiO2) contain high amount of Silica from all across Rajasthan and manufacture High Quality Quartz Grits in various sizes with purity of  > 99% under the best manufacturing process to maintain the highest standards of quality. ",
     physicalProperties: [
       { property: "Color", value: "White to off-white" },
       { property: "Specific Gravity", value: "2.65 g/cm³" },
@@ -173,15 +173,50 @@ const productsData: Record<string, {
       { industry: "Construction", uses: ["Flooring", "Anti-skid surfaces", "Decorative aggregates"] },
     ],
   },
-  "talc-powder": {
-    name: "Talc Powder",
+  "dolomite-grits": {
+    name: "Dolomite Grits",
+    purity: "98%+",
+    image: "https://i.ibb.co/Ym90GcQ/dolomite-grits.jpg",
+    description: "Graded silica grits for filtration and surface finishing",
+    rawMaterial: "Selected dolomite lumps processed for uniform sizing",
+    productionCapacity: "600+ MT per month",
+    whatIs: "Dolomite Grits are made by crushing High Quality Dolomite stone. Through crushing them into smaller pieces using crushers and mills, and then processing to achieve desired sizes and purity, often involving washing, magnetic separation and automatic grits colour shorting treatments to remove impurities, resulting in fine grains which use in various industries.",
+    how:"We source top premium grade of Dolomite lumps CaMg (CO3)2 contain high amount of Calcium and Magnesium Carbonate from all across Rajasthan and manufacture High Quality Dolomite Grits in various sizes with purity of  > 98% under the best manufacturing process to maintain the highest standards of quality. ",
+    physicalProperties: [
+      { property: "Color", value: "White to off-white" },
+      { property: "Specific Gravity", value: "2.65 g/cm³" },
+      { property: "Hardness (Mohs)", value: "7" },
+      { property: "Sphericity", value: "High" },
+      { property: "Friability", value: "Low" },
+      { property: "Moisture", value: "<0.5%" },
+    ],
+    chemicalProperties: [
+      { property: "SiO2", value: "≥99%" },
+      { property: "Fe2O3", value: "<0.02%" },
+      { property: "Al2O3", value: "<0.5%" },
+      { property: "CaO", value: "<0.1%" },
+      { property: "Acid Solubility", value: "<2%" },
+    ],
+    MeshSizes: ["200", "300", "500", "1000"],
+    MicronSizes: ["2 Micron to 74 Micron"],
+      SizeLine: ["Our Quartz Grits available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
+    packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
+    applications: [
+      { industry: "Water Filtration", uses: ["Swimming pools", "Water treatment plants", "Industrial filtration"] },
+      { industry: "Surface Finishing", uses: ["Sandblasting", "Surface preparation", "Cleaning"] },
+      { industry: "Abrasives", uses: ["Grinding wheels", "Polishing compounds", "Cutting tools"] },
+      { industry: "Construction", uses: ["Flooring", "Anti-skid surfaces", "Decorative aggregates"] },
+    ],
+  },
+  "pebble": {
+    name: "Pebble",
     purity: "96%+",
-    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=600&fit=crop",
+    image: "https://i.ibb.co/vx7nXVZv/pebble.png",
     description: "Finest talc for pharmaceuticals, cosmetics and rubber",
     rawMaterial: "High-grade talc ore from Rajasthan deposits",
     productionCapacity: "500+ MT per month",
-    whatIs: "Talc Powder is a hydrated magnesium silicate known for its soft texture, high lubricity, and chemical inertness. It is the softest mineral (Mohs hardness 1) and is widely used in pharmaceuticals, cosmetics, rubber, plastics, and paper industries.",
-    how:"",
+    whatIs: "Pebbles are highly versatile natural stones used extensively for landscaping, decoration, functional drainage and also have health benefits. They serve as durable, lowmaintenance garden mulch to suppress weeds and retain soil moisture.",
+    how:"Pebbles are sourced from mines (or more commonly, quarries) through a process of extraction and refinement that transforms large, raw, angular rock into small, smooth, rounded stones.",
     physicalProperties: [
       { property: "Color", value: "White to light grey" },
       { property: "Specific Gravity", value: "2.7-2.8 g/cm³" },
@@ -211,14 +246,14 @@ const productsData: Record<string, {
     ],
   },
   "coated-calcite": {
-    name: "Coated Calcite",
+    name: "Coated Calcite Powder",
     purity: "98%+",
-    image: "https://images.unsplash.com/photo-1533907650686-70576141c030?w=800&h=600&fit=crop",
+    image: "https://i.ibb.co/xTs0rBc/coated-calcite.jpg",
     description: "Stearic acid coated calcium carbonate for enhanced polymer compatibility",
     rawMaterial: "Premium calcite powder with stearic acid surface treatment",
     productionCapacity: "400+ MT per month",
-    whatIs: "Coated Calcite is calcium carbonate that has been surface-treated with stearic acid or other fatty acids. This coating improves dispersion, reduces moisture absorption, and enhances compatibility with polymer matrices, making it ideal for PVC, cables, and masterbatch applications.",
-    how:"",
+    whatIs: "Coated Calcite powder is a form of fine ground  Calcium Carbonate (CaCO3) that has been surface-treated with substances like Stearic acid. The coating make the powder Hydrophobic (water-repellent) which improves its compatibility, dispersion and performance when used as a filler or additive in industrial applications, particularly in polymer-based materials. Due to unique properties Coated Calcite powder used across various industries.",
+    how:"We are the leading Manufacture and Supplier of High Quality Coated Calcite Powder   under the best manufacturing process to maintain the highest standards of quality",
     physicalProperties: [
       { property: "Color", value: "White" },
       { property: "Specific Gravity", value: "2.65 g/cm³" },
@@ -234,7 +269,7 @@ const productsData: Record<string, {
       { property: "SiO2", value: "<0.5%" },
       { property: "Fe2O3", value: "<0.05%" },
     ],
-    MeshSizes: ["200", "300", "500", "1000"],
+    MeshSizes: ["200", "300", "500", "700"],
     MicronSizes: ["2 Micron to 74 Micron"],
       SizeLine: ["Our Coated Calcite powder available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
@@ -246,14 +281,14 @@ const productsData: Record<string, {
     ],
   },
   "coated-dolomite": {
-    name: "Coated Dolomite",
+    name: "Coated Dolomite Powder",
     purity: "97%+",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop",
+    image: "https://i.ibb.co/GfJ4gPQ0/Coated-dolomite.jpg",
     description: "Surface-treated dolomite for specialized polymer applications",
     rawMaterial: "Premium dolomite with surface modification treatment",
     productionCapacity: "300+ MT per month",
-    whatIs: "Coated Dolomite is dolomite powder that has been surface-treated for enhanced compatibility with polymers. The coating reduces moisture absorption, improves dispersion, and provides better mechanical properties in rubber and plastic applications.",
-    how:"",
+    whatIs: "Coated Dolomite powder is a form of fine ground  Calcium Magnesium Carbonate (CaMg(CO3)2 that has been surface-treated with substances like Stearic acid. The coating make the powder Hydrophobic (water-repellent) which improves its compatibility, dispersion, and performance when used as a filler or additive in industrial applications, particularly in polymer-based materials. Due to unique properties Coated Dolomite powder used across various industries",
+    how:"We are the leading Manufacture and Supplier of High Quality Coated Dolomite Powder with purity of  under the best manufacturing process to maintain the highest standards of quality. ",
     physicalProperties: [
       { property: "Color", value: "White to light grey" },
       { property: "Specific Gravity", value: "2.80 g/cm³" },
@@ -269,8 +304,8 @@ const productsData: Record<string, {
       { property: "SiO2", value: "<1.0%" },
       { property: "Fe2O3", value: "<0.1%" },
     ],
-    MeshSizes: ["200", "300", "500", "1000"],
-    MicronSizes: ["2 Micron to 74 Micron"],
+    MeshSizes: ["200", "300","400", "500"],
+    MicronSizes: ["10 Micron to 74 Micron"],
       SizeLine: ["Our Coated Dolomite powder available at the most affordable prices and in all Micron & Mesh size as per customer requirement: "],
     packaging: ["25 Kg PP Bags", "50 Kg PP Bags", "1 MT Jumbo Bags"],
     applications: [
@@ -391,37 +426,44 @@ const ProductDetail = () => {
                 <table className="w-full bg-card rounded-lg shadow-md">
                   <thead>
                     <tr className="border-b border-border">
-                      <th className="text-left p-4 font-heading font-semibold text-foreground">Mesh Size</th>
-                      <th className="text-left p-4 font-heading font-semibold text-foreground">Particle Size (mm)</th>
-                      <th className="text-left p-4 font-heading font-semibold text-foreground">Application</th>
+                      <th className="text-left p-4 font-heading font-semibold text-foreground">Serial No</th>
+                      <th className="text-left p-4 font-heading font-semibold text-foreground">Size (mm)</th>
+                      <th className="text-left p-4 font-heading font-semibold text-foreground">Grade</th>
+                      <th className="text-left p-4 font-heading font-semibold text-foreground">Whiteness</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-border/50">
-                      <td className="p-4 text-muted-foreground">8-16 Mesh</td>
-                      <td className="p-4 text-muted-foreground">1.18 - 2.36 mm</td>
-                      <td className="p-4 text-muted-foreground">Water filtration, Decorative</td>
+                      <td className="p-4 text-muted-foreground">1</td>
+                      <td className="p-4 text-muted-foreground">0.1mm - 0.4mm</td>
+                      <td className="p-4 text-muted-foreground">Snow White Quartz</td>
+                      <td className="p-4 text-muted-foreground">98%+</td>
                     </tr>
                     <tr className="border-b border-border/50">
-                      <td className="p-4 text-muted-foreground">16-30 Mesh</td>
-                      <td className="p-4 text-muted-foreground">0.60 - 1.18 mm</td>
-                      <td className="p-4 text-muted-foreground">Filtration, Sandblasting</td>
+                      <td className="p-4 text-muted-foreground">2</td>
+                      <td className="p-4 text-muted-foreground">0.3mm - 0.7mm</td>
+                      <td className="p-4 text-muted-foreground">Milky White Quartz</td>
+                      <td className="p-4 text-muted-foreground">98%+</td>
                     </tr>
                     <tr className="border-b border-border/50">
-                      <td className="p-4 text-muted-foreground">30-60 Mesh</td>
-                      <td className="p-4 text-muted-foreground">0.25 - 0.60 mm</td>
-                      <td className="p-4 text-muted-foreground">Fine filtration, Abrasives</td>
+                      <td className="p-4 text-muted-foreground">3</td>
+                      <td className="p-4 text-muted-foreground">0.6mm - 1.2mm</td>
+                      <td className="p-4 text-muted-foreground">Glassy Quartz</td>
+                      <td className="p-4 text-muted-foreground">98%+</td>
                     </tr>
                     <tr className="border-b border-border/50">
-                      <td className="p-4 text-muted-foreground">60-100 Mesh</td>
-                      <td className="p-4 text-muted-foreground">0.15 - 0.25 mm</td>
-                      <td className="p-4 text-muted-foreground">Industrial, Construction</td>
+                      <td className="p-4 text-muted-foreground">4</td>
+                      <td className="p-4 text-muted-foreground">1.2mm - 2.5mm</td>
+                      <td className="p-4 text-muted-foreground">Semi Grade Quartz</td>
+                      <td className="p-4 text-muted-foreground">98%+</td>
                     </tr>
                     <tr>
-                      <td className="p-4 text-muted-foreground">100-200 Mesh</td>
-                      <td className="p-4 text-muted-foreground">0.075 - 0.15 mm</td>
-                      <td className="p-4 text-muted-foreground">Fine applications</td>
+                      <td className="p-4 text-muted-foreground">5</td>
+                      <td className="p-4 text-muted-foreground">2.5mm - 4mm</td>
+                      <td className="p-4 text-muted-foreground">Semi Grade Quartz</td>
+                      <td className="p-4 text-muted-foreground">97%+</td>
                     </tr>
+                    
                   </tbody>
                 </table>
               </div>

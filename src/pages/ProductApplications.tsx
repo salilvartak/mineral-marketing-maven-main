@@ -1,12 +1,11 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 // --- Data Structure ---
-// Ideally, this should be in a separate data file, but I'll keep it here for the example.
 const applicationsData: Record<string, {
   name: string;
   sections: {
@@ -20,7 +19,7 @@ const applicationsData: Record<string, {
     sections: [
       {
         title: "Paints and Coatings",
-        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80", // Paint bucket/wall
+        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80",
         points: [
           "Used as a Filler to provide Brightness, Opacity, Whiteness and reduce costs.",
           "Improves flow Characteristics, covering strength and texture.",
@@ -30,7 +29,7 @@ const applicationsData: Record<string, {
       },
       {
         title: "Paper Manufacturing",
-        image: "https://images.unsplash.com/photo-1603842602330-9b3780360492?w=800&q=80", // Paper rolls
+        image: "https://images.unsplash.com/photo-1603842602330-9b3780360492?w=800&q=80",
         points: [
           "A bright white Calcium Carbonate added to paper pulp as a filler in alkaline papers or applied as a coating pigment.",
           "Calcite powder is an ideal component for producing writing, printing, and packaging grade paper.",
@@ -40,7 +39,7 @@ const applicationsData: Record<string, {
       },
       {
         title: "Plastics and Polymers",
-        image: "https://images.unsplash.com/photo-1622329775330-9b3780360492?w=800&q=80", // Plastic pipes/granules (Placeholder)
+        image: "https://images.unsplash.com/photo-1622329775330-9b3780360492?w=800&q=80",
         points: [
           "Is a primary filler in various polymers (PVC, PE, PP) to reduce production costs, improve dimensional stability, enhance rigidity, and provide a smooth surface finish.",
           "Increases humidity retention and consistency in plastic.",
@@ -49,7 +48,7 @@ const applicationsData: Record<string, {
       },
       {
         title: "Glass and Ceramics",
-        image: "https://images.unsplash.com/photo-1590422946252-87063467669d?w=800&q=80", // Glass/Ceramics
+        image: "https://images.unsplash.com/photo-1590422946252-87063467669d?w=800&q=80",
         points: [
           "Calcite powder is an important component in glass making and is used as a stabilizer which improves the mechanical properties and physical appearance of the glass.",
           "In Ceramics it helps control shrinkage during firing and acts as a flux in glazes to lower melting points.",
@@ -57,49 +56,204 @@ const applicationsData: Record<string, {
       },
       {
         title: "Rubber Industry",
-        image: "https://images.unsplash.com/photo-1552353617-66a9829f7f45?w=800&q=80", // Rubber tires
+        image: "https://images.unsplash.com/photo-1552353617-66a9829f7f45?w=800&q=80",
         points: [
           "In Rubber industries Calcite Powder is one of the prominent minerals due its performance factor.",
           "It is used as a reinforcing filler to improve flexibility, durability, tear resistance, and overall mechanical performance while reducing the amount of expensive rubber required.",
           "Acts as a volume enhancer and stabilizer in Rubber.",
         ],
       },
+    ],
+  },
+  "dolomite-powder": {
+    name: "Dolomite Powder",
+    sections: [
       {
-        title: "Agriculture and Feed",
-        image: "https://images.unsplash.com/photo-1625246333195-58197bd47d26?w=800&q=80", // Farming
+        title: "Glass & Ceramics",
+        image: "https://images.unsplash.com/photo-1565610261709-67d93d56d10c?w=800&q=80",
         points: [
-          "Functions as a Soil Conditioner to neutralize acidic soil and provide calcium to plants.",
-          "Used in Livestock to provide essential calcium for healthy growth and metabolism.",
+          "Acts as a flux material to lower melting points in glass production.",
+          "Enhances thermal stability and durability of the final product.",
+          "Improves the mechanical properties of ceramic bodies.",
         ],
       },
       {
-        title: "Adhesives and Sealants",
-        image: "https://images.unsplash.com/photo-1581092921461-eab6245b0262?w=800&q=80", // Industrial glue/sealant
+        title: "Agriculture",
+        image: "https://images.unsplash.com/photo-1625246333195-58197bd47d26?w=800&q=80",
         points: [
-          "Calcite powder improves viscosity and enhances physical strength.",
-          "Cost effective filler material.",
+          "Used for soil conditioning to neutralize acidity (pH correction).",
+          "Provides an essential magnesium supplement for crops.",
+          "Improves soil structure and nutrient absorption.",
+        ],
+      },
+      {
+        title: "Construction",
+        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
+        points: [
+          "Key ingredient in building materials and cement additives.",
+          "Used in road construction for stability and durability.",
+          "Acts as a filler in concrete and asphalt mixtures.",
+        ],
+      },
+      {
+        title: "Steel Industry",
+        image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&q=80",
+        points: [
+          "Used as a flux in iron making to lower impurities.",
+          "Assists in slag formation and sulfur removal.",
+          "Refractory material for lining furnaces.",
         ],
       },
     ],
   },
-  // Add other products here with their specific data...
-  // For now, if a product isn't found, we can fallback or show a 'Coming Soon'
+  "quartz-powder": {
+    name: "Quartz Powder",
+    sections: [
+      {
+        title: "Slab Manufacturing",
+        image: "https://images.unsplash.com/photo-1581093583449-ed2521344463?w=800&q=80",
+        points: [
+          "Primary raw material for Quartz slabs and Engineered stone.",
+          "Provides extreme hardness and durability to countertops.",
+          "Ensures consistent color and texture in artificial stone.",
+        ],
+      },
+      {
+        title: "Glass Industry",
+        image: "https://images.unsplash.com/photo-1506720456291-38317fb661c9?w=800&q=80",
+        points: [
+          "Essential silica source for container glass and flat glass.",
+          "Improves clarity and thermal shock resistance.",
+          "Used in specialty glass manufacturing.",
+        ],
+      },
+      {
+        title: "Construction & Paints",
+        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80",
+        points: [
+          "Functional filler in paints for abrasion resistance.",
+          "Used in concrete additives and flooring solutions.",
+          "Enhances the durability of exterior coatings.",
+        ],
+      },
+    ],
+  },
+  "quartz-grits": {
+    name: "Quartz Grits",
+    sections: [
+      {
+        title: "Water Filtration",
+        image: "https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=800&q=80",
+        points: [
+          "Standard media for swimming pool filters and water treatment plants.",
+          "High silica content ensures effective removal of impurities.",
+          "Durable particles resist degradation during backwashing.",
+        ],
+      },
+      {
+        title: "Surface Finishing",
+        image: "https://images.unsplash.com/photo-1590059599723-b6d31846152b?w=800&q=80",
+        points: [
+          "Used in sandblasting for surface preparation and cleaning.",
+          "Provides uniform texturing on metals and stone.",
+          "Effective for rust removal and paint stripping.",
+        ],
+      },
+      {
+        title: "Construction & Decor",
+        image: "https://images.unsplash.com/photo-1518118029519-86641887dc74?w=800&q=80",
+        points: [
+          "Used in epoxy flooring for anti-skid surfaces.",
+          "Decorative aggregates for landscaping and aquariums.",
+          "Texture additive for specialized plasters.",
+        ],
+      },
+    ],
+  },
+  "talc-powder": {
+    name: "Talc Powder",
+    sections: [
+      {
+        title: "Pharmaceuticals & Cosmetics",
+        image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80",
+        points: [
+          "Lubricant and filler in tablet manufacturing.",
+          "Base for talcum powder, face powder, and body powders.",
+          "Provides soft texture and prevents caking in cosmetics.",
+        ],
+      },
+      {
+        title: "Rubber & Plastics",
+        image: "https://images.unsplash.com/photo-1523293836414-90ab390ea659?w=800&q=80",
+        points: [
+          "Reinforcing filler that improves stiffness and dimensional stability.",
+          "Acts as a processing aid to reduce viscosity.",
+          "Enhances surface quality and heat resistance.",
+        ],
+      },
+    ],
+  },
+  "coated-calcite": {
+    name: "Coated Calcite",
+    sections: [
+      {
+        title: "PVC & Polymers",
+        image: "https://images.unsplash.com/photo-1622329775330-9b3780360492?w=800&q=80",
+        points: [
+          "Essential for PVC pipes, fittings, and profiles.",
+          "Stearic acid coating improves dispersion in polymer matrices.",
+          "Reduces processing torque and wear on machinery.",
+        ],
+      },
+      {
+        title: "Cable Compounds",
+        image: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=800&q=80",
+        points: [
+          "Used in insulation and sheathing for electrical cables.",
+          "Lowers moisture absorption compared to uncoated fillers.",
+          "Maintains electrical properties and flexibility.",
+        ],
+      },
+    ],
+  },
+  "coated-dolomite": {
+    name: "Coated Dolomite",
+    sections: [
+      {
+        title: "Plastics & Rubber",
+        image: "https://images.unsplash.com/photo-1605307374020-f5a6b0c61980?w=800&q=80",
+        points: [
+          "Surface-treated for compatibility with PP and PE compounds.",
+          "Used in tire industry and industrial rubber goods.",
+          "Provides better impact strength and stiffness balance.",
+        ],
+      },
+      {
+        title: "Adhesives & Sealants",
+        image: "https://images.unsplash.com/photo-1581092921461-eab6245b0262?w=800&q=80",
+        points: [
+          "Filler for silicone and PU sealants.",
+          "Low moisture content ensures longer shelf life of sealants.",
+          "Cost-effective alternative to other functional fillers.",
+        ],
+      },
+    ],
+  },
 };
 
 const ProductApplications = () => {
   const { productId } = useParams<{ productId: string }>();
-  // Default to calcite if specific data is missing for the demo, 
-  // or handle the error gracefully.
+  
   const product = productId && applicationsData[productId] 
     ? applicationsData[productId] 
     : null;
 
   if (!product) {
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-background">
             <Header />
             <div className="flex-1 flex flex-col items-center justify-center pt-20">
-                <h1 className="text-2xl font-bold mb-4">Content coming soon for {productId}</h1>
+                <h1 className="text-2xl font-bold mb-4 text-foreground">Application data not found for {productId}</h1>
                 <Button asChild><Link to="/products">Back to Products</Link></Button>
             </div>
             <Footer />
@@ -120,8 +274,8 @@ const ProductApplications = () => {
                     Back to Product Details
                 </Link>
             </div>
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
-                Applications of <span className="text-accent">{product.name}</span>
+            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
+                Applications of <span className="text-primary">{product.name}</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Explore the versatile industrial uses and technical benefits of our premium {product.name}.
@@ -143,8 +297,9 @@ const ProductApplications = () => {
             >
               {/* Image Side */}
               <div className="w-full lg:w-1/2">
-                <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
-                    <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
+                <div className="relative group overflow-hidden rounded-2xl shadow-xl">
+                    {/* Standard dark overlay for better text contrast if needed, currently transparent on hover */}
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
                     <img 
                         src={section.image} 
                         alt={section.title}
@@ -155,7 +310,7 @@ const ProductApplications = () => {
 
               {/* Text Side */}
               <div className="w-full lg:w-1/2 space-y-6">
-                <h2 className="text-3xl font-bold text-foreground border-l-4 border-accent pl-4">
+                <h2 className="text-3xl font-bold text-foreground border-l-4 border-primary pl-4">
                   {section.title}
                 </h2>
                 
@@ -169,7 +324,7 @@ const ProductApplications = () => {
                       transition={{ delay: 0.1 * i, duration: 0.5 }}
                       className="flex items-start gap-3"
                     >
-                      <CheckCircle2 className="h-6 w-6 text-accent shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                       <span className="text-muted-foreground text-lg leading-relaxed">
                         {point}
                       </span>
@@ -183,7 +338,7 @@ const ProductApplications = () => {
 
         {/* Bottom CTA */}
         <section className="container mx-auto px-4 mt-24">
-            <div className="bg-primary/5 rounded-3xl p-8 md:p-12 text-center">
+            <div className="bg-muted rounded-3xl p-8 md:p-12 text-center">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Need technical specifications?</h3>
                 <p className="text-muted-foreground mb-8">View the full technical data sheet and chemical composition.</p>
                 <Button variant="default" size="lg" asChild>

@@ -17,13 +17,16 @@ const productLinks = [
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobileAppOpen, setIsMobileAppOpen] = useState(false); // State for mobile accordion
+  const [isMobileAppOpen, setIsMobileAppOpen] = useState(false);
+  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false); // New state for mobile products menu
   const location = useLocation();
 
   // Helper to check if a link is active
   const isActive = (path: string) => location.pathname === path;
   // Helper to check if any application page is active
   const isAppActive = location.pathname.includes("/applications");
+  // Helper to check if any product page is active (but not applications)
+  const isProductActive = location.pathname.includes("/products") && !location.pathname.includes("/applications");
 
   return (
     <header className="fixed w-full z-50">
@@ -63,9 +66,39 @@ export const Header = () => {
                 About Us
               </Link>
 
-              <Link to="/products" className={cn("font-medium transition-colors relative py-2", isActive("/products") ? "text-accent" : "text-white hover:text-accent")}>
-                Products
-              </Link>
+              {/* PRODUCTS DROPDOWN (NEW) */}
+              <div className="relative group h-full flex items-center">
+                <Link 
+                  to="/products"
+                  className={cn(
+                    "flex items-center gap-1 font-medium transition-colors py-2 focus:outline-none",
+                    isProductActive ? "text-accent" : "text-white hover:text-accent"
+                  )}
+                >
+                  Products
+                  <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                </Link>
+                
+                {/* Dropdown Content */}
+                <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[240px]">
+                  <div className="bg-white rounded-lg shadow-xl border border-border/10 overflow-hidden py-2">
+                    {productLinks.map((product) => (
+                      <Link
+                        key={product.slug}
+                        to={`/products/${product.slug}`}
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-accent/10 hover:text-accent transition-colors"
+                      >
+                        {product.name}
+                      </Link>
+                    ))}
+                    <div className="border-t border-border/10 mt-1 pt-1">
+                        <Link to="/products" className="block px-4 py-2 text-sm font-semibold text-primary hover:text-accent transition-colors">
+                            View All Products
+                        </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               {/* APPLICATIONS DROPDOWN */}
               <div className="relative group h-full flex items-center">
@@ -132,9 +165,39 @@ export const Header = () => {
               <Link to="/about" onClick={() => setIsMenuOpen(false)} className={cn("block py-3 font-medium border-b border-border/50", isActive("/about") ? "text-accent" : "text-foreground")}>
                 About Us
               </Link>
-              <Link to="/products" onClick={() => setIsMenuOpen(false)} className={cn("block py-3 font-medium border-b border-border/50", isActive("/products") ? "text-accent" : "text-foreground")}>
-                Products
-              </Link>
+              
+              {/* Mobile Products Accordion (NEW) */}
+              <div className="border-b border-border/50">
+                <button 
+                  onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
+                  className={cn("flex w-full items-center justify-between py-3 font-medium", isProductActive ? "text-accent" : "text-foreground")}
+                >
+                  Products
+                  <ChevronDown className={cn("h-5 w-5 transition-transform", isMobileProductsOpen ? "rotate-180" : "")} />
+                </button>
+                
+                {isMobileProductsOpen && (
+                  <div className="bg-muted/30 rounded-lg mb-3 overflow-hidden">
+                    {productLinks.map((product) => (
+                      <Link
+                        key={product.slug}
+                        to={`/products/${product.slug}`}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block px-4 py-3 text-sm text-muted-foreground hover:text-accent border-l-2 border-transparent hover:border-accent hover:bg-accent/5 transition-all"
+                      >
+                        {product.name}
+                      </Link>
+                    ))}
+                    <Link
+                      to="/products"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block px-4 py-3 text-sm font-semibold text-primary hover:text-accent border-l-2 border-transparent transition-all"
+                    >
+                      View All Products
+                    </Link>
+                  </div>
+                )}
+              </div>
 
               {/* Mobile Applications Accordion */}
               <div className="border-b border-border/50">
